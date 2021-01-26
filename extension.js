@@ -4,6 +4,7 @@ const vscode = require("vscode");
 const WebSocket = require("ws");
 const ip = require("ip");
 const path = require("path");
+const { OutputFileType, createPrinter } = require("typescript");
 const port = 8080;
 
 // this method is called when your extension is activated
@@ -13,35 +14,61 @@ const port = 8080;
  * @param {vscode.ExtensionContext} context
  */
 
-const watcher = vscode.workspace.createFileSystemWatcher("**/*.jelly");
+const output = vscode.window.createOutputChannel("Jellycuts");
+var cacheWS = null
+output.show(true);
 
 function activate(context) {
   const wss = new WebSocket.Server({ port: port });
-  vscode.window.showInformationMessage(`Jellycuts bridge opened on port ${ip.address()}:${port}`);
+  wss.setMaxListeners(1);
+  wss.setMaxListeners(1)
+
+  vscode.window.showInformationMessage(
+    `Jellycuts bridge opened on port ${ip.address()}:${port}`
+  );
 
   wss.on("connection", function connection(ws) {
+    cacheWS = ws
     vscode.window.showInformationMessage("New Connection to Webserver"); //In my opinion this should be called
-    ws.on("message", function incoming(message) {
-		let console = vscode.window.createOutputChannel("Jellycuts");
-		console.appendLine(`${message}`)
-    });
 
-    watcher.onDidChange(() => {
-		updateApp(ws);
+    ws.on("message", function incoming(message) {
+      if(message == "run") {
+        updateApp(ws, "run")
+      } else if (message == "export") {
+        updateApp(ws, "export")
+      }
     });
   });
+
+  let runDisposable = vscode.commands.registerCommand('jellycuts-support.runOnDevice', () => {
+    if (cacheWS != null) {
+      updateApp(cacheWS, "run")
+    }
+  });
+
+  context.subscriptions.push(runDisposable);
+  
+  let exportDisposable = vscode.commands.registerCommand('jellycuts-support.exportOnDevice', () => {
+    if (cacheWS != null) {
+      updateApp(cacheWS, "export")
+    }
+  });
+
+  context.subscriptions.push(exportDisposable);
 }
 
-function updateApp(ws) {
-	const editor = vscode.window.activeTextEditor;
-	var fileName = path.basename(editor.document.uri.fsPath);
-	
-	if (editor) {
-		let document = editor.document;
-		const documentText = document.getText();
-		ws.send(`${fileName}\n${documentText}`);
-		vscode.window.showInformationMessage("Updated Server");
-	}
+function updateApp(ws, type) {
+  output.clear();
+  const editor = vscode.window.activeTextEditor;
+  var fileName = path.basename(editor.document.uri.fsPath);
+
+  if (editor) {
+    let document = editor.document;
+    const documentText = document.getText();
+    var dictionary = {"fileName": fileName, "text": documentText, "type": type}
+    ws.send(JSON.stringify(dictionary));
+    // vscode.window.showInformationMessage("Updated Server");
+  }
 }
 
 exports.activate = activate;

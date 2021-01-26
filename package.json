@@ -15,12 +15,19 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [
+		"keybindings": [
+            {
+                "command": "jellycuts-support.runOnDevice",
+                "key": "ctrl+r",
+                "mac": "cmd+r"
+			},
 			{
-				"command": "jellycuts-support.helloWorld",
-				"title": "Hello World"
+                "command": "jellycuts-support.exportOnDevice",
+                "key": "ctrl+shift+e",
+                "mac": "cmd+shift+e"
 			}
-		]
+        ]
+
 	},
 	"scripts": {
 		"lint": "eslint .",
