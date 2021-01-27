@@ -27,15 +27,22 @@ function activate(context) {
     `Jellycuts bridge opened on port ${ip.address()}:${port}`
   );
 
-  wss.on("connection", function connection(ws) {
+  wss.on("connection", function connection(ws, req) {
     cacheWS = ws
-    vscode.window.showInformationMessage("New Connection to Webserver"); //In my opinion this should be called
+    vscode.window.showInformationMessage(`Client Connected -> ${req.connection.remoteAddress}`);
 
     ws.on("message", function incoming(message) {
       if(message == "run") {
         updateApp(ws, "run")
       } else if (message == "export") {
         updateApp(ws, "export")
+      } else if (message == "download") {
+        updateApp(ws, "download")
+      } else if (message == "closing") {
+        vscode.window.showInformationMessage(`Client Disconnected -> ${req.connection.remoteAddress}`);
+        cacheWS = null
+      } else if (message != "ping") {
+        output.append(`${message}\n`);
       }
     });
   });
