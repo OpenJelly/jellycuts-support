@@ -16,18 +16,17 @@
 	"main": "./extension.js",
 	"contributes": {
 		"keybindings": [
-            {
-                "command": "jellycuts-support.runOnDevice",
-                "key": "ctrl+r",
-                "mac": "cmd+r"
+			{
+				"command": "jellycuts-support.runOnDevice",
+				"key": "ctrl+r",
+				"mac": "cmd+r"
 			},
 			{
-                "command": "jellycuts-support.exportOnDevice",
-                "key": "ctrl+shift+e",
-                "mac": "cmd+shift+e"
+				"command": "jellycuts-support.exportOnDevice",
+				"key": "ctrl+shift+e",
+				"mac": "cmd+shift+e"
 			}
-        ]
-
+		]
 	},
 	"scripts": {
 		"lint": "eslint .",
@@ -46,6 +45,7 @@
 		"vscode-test": "^1.4.0"
 	},
 	"dependencies": {
+		"internal-ip": "^6.2.0",
 		"ip": "^1.1.5",
 		"ws": "^7.4.2"
 	}
