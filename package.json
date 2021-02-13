@@ -10,11 +10,22 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:jellycuts-support.helloWorld",
+		"onCommand:jellycuts-support.runserver",
+		"onCommand:jellycuts-support.closeserver",
 		"onLanguage:Jelly"
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"commands": [
+			{
+			  "command": "jellycuts-support.runserver",
+			  "title": "Open Jellycuts Bridge"
+			},
+			{
+				"command": "jellycuts-support.closeserver",
+				"title": "Close Jellycuts Bridge"
+			}  
+		],	  
 		"keybindings": [
 			{
 				"command": "jellycuts-support.runOnDevice",
@@ -26,7 +37,36 @@
 				"key": "ctrl+shift+e",
 				"mac": "cmd+shift+e"
 			}
-		]
+		],
+		"languages": [
+			{
+				"id": "Jelly",
+				"aliases": [
+					"Jelly",
+					"jelly",
+					"Jellycuts",
+					"jellycut"
+				],
+				"extensions": [
+					".jelly",
+					".jellycut"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "Jelly",
+				"scopeName": "source.jelly",
+				"path": "./syntaxes/jelly.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+			  "language": "Jelly",
+			  "path": "./snippets/snippets.json"
+			}
+		  ]
 	},
 	"scripts": {
 		"lint": "eslint .",
@@ -46,7 +86,6 @@
 	},
 	"dependencies": {
 		"internal-ip": "^6.2.0",
-		"ip": "^1.1.5",
 		"ws": "^7.4.2"
 	}
 }
