@@ -2,16 +2,19 @@
 	"name": "jellycuts-support",
 	"displayName": "Jellycuts Support",
 	"description": "Support for the Jellycuts iOS app.",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
 	"categories": [
-		"Other"
+		"Programming Languages"
 	],
 	"activationEvents": [
 		"onCommand:jellycuts-support.runserver",
 		"onCommand:jellycuts-support.closeserver",
+		"onCommand:jellycuts-support.export",
+		"onCommand:jellycuts-support.run",
 		"onLanguage:Jelly"
 	],
 	"main": "./extension.js",
@@ -24,20 +27,16 @@
 			{
 				"command": "jellycuts-support.closeserver",
 				"title": "Close Jellycuts Bridge"
-			}  
-		],	  
-		"keybindings": [
-			{
-				"command": "jellycuts-support.runOnDevice",
-				"key": "ctrl+r",
-				"mac": "cmd+r"
 			},
 			{
-				"command": "jellycuts-support.exportOnDevice",
-				"key": "ctrl+shift+e",
-				"mac": "cmd+shift+e"
+				"command": "jellycuts-support.export",
+				"title": "Export to Shortcuts"
+			},
+			{
+				"command": "jellycuts-support.run",
+				"title": "Run in Jellycuts"
 			}
-		],
+		],	  
 		"languages": [
 			{
 				"id": "Jelly",
@@ -87,5 +86,10 @@
 	"dependencies": {
 		"internal-ip": "^6.2.0",
 		"ws": "^7.4.2"
+	},
+	"__metadata": {
+		"id": "71135255-22a8-4a4f-84b1-437157808e67",
+		"publisherDisplayName": "ActuallyZach",
+		"publisherId": "4c25b1c5-f270-4867-b145-c637aeacdac0"
 	}
 }

@@ -58,23 +58,27 @@ function activate(context) {
   };
   context.subscriptions.push(vscode.commands.registerCommand(closeServerCommand, closeServerHandler));
 
-  let runDisposable = vscode.commands.registerCommand('jellycuts-support.runOnDevice', () => {
+  const runHandler = () => {
     if (cacheWS != null) {
       vscode.window.showInformationMessage(`Running Jellycut on connected device`);
       updateApp(cacheWS, "run")
+    } else {
+      vscode.window.showWarningMessage(`No bridge started or no connections to the current bridge`);
     }
-  });
+  };
 
-  context.subscriptions.push(runDisposable);
+  context.subscriptions.push(vscode.commands.registerCommand("jellycuts-support.run", runHandler));
   
-  let exportDisposable = vscode.commands.registerCommand('jellycuts-support.exportOnDevice', () => {
+  const exportHandler = () => {
     if (cacheWS != null) {
       vscode.window.showInformationMessage(`Exporting Jellycut to Shortcuts`);
       updateApp(cacheWS, "export")
+    } else {
+      vscode.window.showWarningMessage(`No bridge started or no connections to the current bridge`);
     }
-  });
+  };
 
-  context.subscriptions.push(exportDisposable);
+  context.subscriptions.push(vscode.commands.registerCommand("jellycuts-support.export", exportHandler));
 }
 
 function updateApp(ws, type) {
@@ -87,7 +91,6 @@ function updateApp(ws, type) {
     const documentText = document.getText();
     var dictionary = {"fileName": fileName, "text": documentText, "type": type}
     ws.send(JSON.stringify(dictionary));
-    // vscode.window.showInformationMessage("Updated Server");
   }
 }
 
