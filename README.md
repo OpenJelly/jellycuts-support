@@ -1,6 +1,5 @@
 # Jellycuts Support
-This extension allows you to use the Jelly language and connect directly into the Jellycuts iOS app.
-
+This extension allows you to use the Jelly language and connect directly into the Jellycuts iOS app.s
 
 ## Jelly language support
 ### Features
@@ -23,5 +22,5 @@ Below are the available commands. To run hit cmd+shift+p (mac) or ctrl+shift+p a
     - Sends an export command to the Jellycuts app. This will compile and open your Jellycut in the Shortcuts app.
 
 # Release Notes
-### 1.0.0
-Initial release of 1.0.0 to go with Jellycuts 1.0.
+### 0.9(17)
+Initial release of 1.0.0 to go with Jellycuts 0.9(17).

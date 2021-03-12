@@ -1,95 +1,89 @@
 {
-	"name": "jellycuts-support",
-	"displayName": "Jellycuts Support",
-	"description": "Support for the Jellycuts iOS app.",
-	"version": "1.0.0",
-	"icon": "images/icon.png",
-	"engines": {
-		"vscode": "^1.52.0"
-	},
-	"categories": [
-		"Programming Languages"
-	],
-	"activationEvents": [
-		"onCommand:jellycuts-support.runserver",
-		"onCommand:jellycuts-support.closeserver",
-		"onCommand:jellycuts-support.export",
-		"onCommand:jellycuts-support.run",
-		"onLanguage:Jelly"
-	],
-	"main": "./extension.js",
-	"contributes": {
-		"commands": [
-			{
-			  "command": "jellycuts-support.runserver",
-			  "title": "Open Jellycuts Bridge"
-			},
-			{
-				"command": "jellycuts-support.closeserver",
-				"title": "Close Jellycuts Bridge"
-			},
-			{
-				"command": "jellycuts-support.export",
-				"title": "Export to Shortcuts"
-			},
-			{
-				"command": "jellycuts-support.run",
-				"title": "Run in Jellycuts"
-			}
-		],	  
-		"languages": [
-			{
-				"id": "Jelly",
-				"aliases": [
-					"Jelly",
-					"jelly",
-					"Jellycuts",
-					"jellycut"
-				],
-				"extensions": [
-					".jelly",
-					".jellycut"
-				],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "Jelly",
-				"scopeName": "source.jelly",
-				"path": "./syntaxes/jelly.tmLanguage.json"
-			}
-		],
-		"snippets": [
-			{
-			  "language": "Jelly",
-			  "path": "./snippets/snippets.json"
-			}
-		  ]
-	},
-	"scripts": {
-		"lint": "eslint .",
-		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.52.0",
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.0",
-		"@types/node": "^14.0.27",
-		"eslint": "^7.6.0",
-		"glob": "^7.1.6",
-		"mocha": "^8.0.1",
-		"typescript": "^3.8.3",
-		"vscode-test": "^1.4.0"
-	},
-	"dependencies": {
-		"internal-ip": "^6.2.0",
-		"ws": "^7.4.2"
-	},
-	"__metadata": {
-		"id": "71135255-22a8-4a4f-84b1-437157808e67",
-		"publisherDisplayName": "ActuallyZach",
-		"publisherId": "4c25b1c5-f270-4867-b145-c637aeacdac0"
-	}
+    "name": "jelly-language-support",
+    "displayName": "Jellycuts Support",
+    "description": "Support for the Jellycuts iOS app.",
+    "version": "0.9.17",
+    "icon": "images/icon.png",
+    "publisher": "ActuallyZach",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onCommand:jellycuts-support.runserver",
+        "onCommand:jellycuts-support.closeserver",
+        "onCommand:jellycuts-support.export",
+        "onCommand:jellycuts-support.run",
+        "onLanguage:Jelly"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [{
+                "command": "jellycuts-support.runserver",
+                "title": "Open Jellycuts Bridge"
+            },
+            {
+                "command": "jellycuts-support.closeserver",
+                "title": "Close Jellycuts Bridge"
+            },
+            {
+                "command": "jellycuts-support.export",
+                "title": "Export to Shortcuts"
+            },
+            {
+                "command": "jellycuts-support.run",
+                "title": "Run in Jellycuts"
+            }
+        ],
+        "languages": [{
+            "id": "Jelly",
+            "aliases": [
+                "Jelly",
+                "jelly",
+                "Jellycuts",
+                "jellycut"
+            ],
+            "extensions": [
+                ".jelly",
+                ".jellycut"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "Jelly",
+            "scopeName": "source.jelly",
+            "path": "./syntaxes/jelly.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "Jelly",
+            "path": "./snippets/snippets.json"
+        }]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.52.0",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^14.0.27",
+        "eslint": "^7.6.0",
+        "glob": "^7.1.6",
+        "mocha": "^8.0.1",
+        "typescript": "^3.8.3",
+        "vscode-test": "^1.4.0"
+    },
+    "dependencies": {
+        "internal-ip": "^6.2.0",
+        "ws": "^7.4.2"
+    },
+    "__metadata": {
+        "id": "71135255-22a8-4a4f-84b1-437157808e67",
+        "publisherDisplayName": "ActuallyZach",
+        "publisherId": "4c25b1c5-f270-4867-b145-c637aeacdac0"
+    }
 }
