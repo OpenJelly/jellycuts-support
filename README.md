@@ -22,5 +22,8 @@ Below are the available commands. To run hit cmd+shift+p (mac) or ctrl+shift+p a
     - Sends an export command to the Jellycuts app. This will compile and open your Jellycut in the Shortcuts app.
 
 # Release Notes
-### 0.9(17)
+### 0.9.26
 Initial release of 1.0.0 to go with Jellycuts 0.9(17).
+
+### 0.9.26
+Fixed a bug where the websocket server was not closing correctly.

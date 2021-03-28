@@ -51,10 +51,12 @@ function activate(context) {
             for (const client of cacheWSS.clients) {
                 client.close();
             }
-            vscode.window.showInformationMessage(`Acitve Jellycuts Bridges have been closed`);
+            vscode.window.showInformationMessage(`All acitve Jellycuts Bridge connections have been closed`);
         } else {
-            vscode.window.showInformationMessage(`There are no active connections to the Jellycuts Bridge`);
+            // vscode.window.showInformationMessage(`There are no active connections to the Jellycuts Bridge`);
         }
+        cacheWSS.close()
+        vscode.window.showInformationMessage(`Closed Jellycuts Bridge`);
     };
     context.subscriptions.push(vscode.commands.registerCommand(closeServerCommand, closeServerHandler));
 

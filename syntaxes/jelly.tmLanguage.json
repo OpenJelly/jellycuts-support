@@ -1,98 +1,90 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Jelly",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#function"
-		},
-		{
-			"include": "#comment"
-		},
-		{
-			"include": "#constants"
-		},
-		{
-			"include": "#operators"
-		},
-		{
-			"include": "#others"
-		}
-	],
-	"repository": {
-		"comment": {
-			"patterns": [
-				{
-				"name": "na.line.double-slash",
-				"match": "^//(.*)"
-				},
-				{
-				"name": "comment.block",
-				"begin": "\/[*]",
-				"end": "[*](\/)"
-				},
-				{
-				"name": "comment.number.sign",
-				"match": "^#(.*)"
-				}
-			]
-		},
-		"keywords": {
-			"patterns": [
-				{
-				"name": "keyword.control.jelly",
-				"match": "#Color|#Icon|\\b(if|else|menu|var|list|dictionary|repeat|nil|repeatEach|Get|import)\\b"
-				}
-			]
-		},
-		"others": {
-			"patterns": [
-				{
-				"name": "keyword.operator.type-casting",
-				"match": "(\\.as|\\.key|\\.get)"
-				}
-			]
-		},
-		"function": {
-			"patterns": [{
-				"name": "support.function.jelly",
-				"match": "([a-zA-Z_0-9\"\\.\\[\\]\\+-]+)(?=\\()"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.jelly",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.jelly",
-					"match": "\\\\."
-				}
-			]
-		},
-		"constants": {
-			"patterns": [{
-				"name": "constant.language.jelly",
-				"match": "\\b(true|false|null)\\b"
-			}]
-		},
-		"escape": {
-			"patterns": [{
-				"name": "constant.character.escape",
-				"match": "\\$\\{.*?\\}"
-			}]
-		},
-		"operators": {
-			"patterns": [{
-				"name": "keyword.operator.jelly",
-				"match": "/--|\\+\\+|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?:|[!$%&*+\\-~\/^]=?/"
-			}]
-		}
-	},
-	"scopeName": "source.jelly"
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Jelly",
+    "patterns": [{
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#function"
+        },
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#others"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "patterns": [{
+                    "name": "na.line.double-slash",
+                    "match": "^//(.*)"
+                },
+                {
+                    "name": "comment.block",
+                    "begin": "\/[*]",
+                    "end": "[*](\/)"
+                },
+                {
+                    "name": "comment.number.sign",
+                    "match": "^#(.*)"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.jelly",
+                "match": "#Color|#Icon|\\b(if|else|menu|var|list|dictionary|repeat|nil|repeatEach|Get|import)\\b"
+            }]
+        },
+        "others": {
+            "patterns": [{
+                "name": "keyword.operator.type-casting",
+                "match": "(\\.as|\\.key|\\.get)"
+            }]
+        },
+        "function": {
+            "patterns": [{
+                "name": "support.function.jelly",
+                "match": "([a-zA-Z_0-9\"\\.\\[\\]\\+-]+)(?=\\()"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.jelly",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "name": "constant.character.escape.jelly",
+                "match": "\\\\."
+            }]
+        },
+        "constants": {
+            "patterns": [{
+                "name": "constant.language.jelly",
+                "match": "\\b(true|false|null)\\b"
+            }]
+        },
+        "escape": {
+            "patterns": [{
+                "name": "constant.character.escape",
+                "match": "\\$\\{.*?\\}"
+            }]
+        },
+        "operators": {
+            "patterns": [{
+                "name": "keyword.operator.jelly",
+                "match": "/--|\\+\\+|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?:|[!$%&*+\\-~\/^]=?/"
+            }]
+        }
+    },
+    "scopeName": "source.jelly"
 }
