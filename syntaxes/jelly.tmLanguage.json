@@ -26,17 +26,13 @@
     "repository": {
         "comment": {
             "patterns": [{
-                    "name": "na.line.double-slash",
-                    "match": "^//(.*)"
+                    "name": "comment.line",
+                    "match": "\/\/(.*)"
                 },
                 {
                     "name": "comment.block",
                     "begin": "\/[*]",
                     "end": "[*](\/)"
-                },
-                {
-                    "name": "comment.number.sign",
-                    "match": "^#(.*)"
                 }
             ]
         },
