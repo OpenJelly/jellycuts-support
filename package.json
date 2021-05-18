@@ -2,7 +2,7 @@
     "name": "jelly-language-support",
     "displayName": "Jellycuts Support",
     "description": "Support for the Jellycuts iOS app.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "images/icon.png",
     "publisher": "ActuallyZach",
     "engines": {
@@ -27,14 +27,6 @@
             {
                 "command": "jellycuts-support.closeserver",
                 "title": "Close Jellycuts Bridge"
-            },
-            {
-                "command": "jellycuts-support.export",
-                "title": "Export to Shortcuts"
-            },
-            {
-                "command": "jellycuts-support.run",
-                "title": "Run in Jellycuts"
             }
         ],
         "languages": [{

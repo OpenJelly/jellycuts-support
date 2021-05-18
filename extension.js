@@ -3,14 +3,27 @@ const WebSocket = require("ws");
 const path = require("path");
 const port = 8080;
 const internalIp = require('internal-ip');
+const fs = require('fs')
 
 const output = vscode.window.createOutputChannel("Jellycuts");
 var cacheWS = null
 var cacheWSS = null
 output.show(true);
 
-//onCommand:
+/* MARK: Initializing file system watcher to update available projects */
+let watcher = vscode.workspace.createFileSystemWatcher("**/*.jelly");
+watcher.onDidChange(uri => {
+    updateApp(cacheWS, "get")
+})
+watcher.onDidCreate(uri => {
+    updateApp(cacheWS, "get")
+})
+watcher.onDidDelete(uri => {
+    updateApp(cacheWS, "get")
+})
+
 function activate(context) {
+
     const runServerCommand = 'jellycuts-support.runserver';
 
     const runServerHandler = () => {
@@ -29,6 +42,8 @@ function activate(context) {
             ws.on("message", function incoming(message) {
                 if (message == "run") {
                     updateApp(ws, "run")
+                } else if (message == 'get') {
+                    updateApp(ws, "get")
                 } else if (message == "export") {
                     updateApp(ws, "export")
                 } else if (message == "download") {
@@ -60,42 +75,66 @@ function activate(context) {
     };
     context.subscriptions.push(vscode.commands.registerCommand(closeServerCommand, closeServerHandler));
 
-    const runHandler = () => {
-        if (cacheWS != null) {
-            vscode.window.showInformationMessage(`Running Jellycut on connected device`);
-            updateApp(cacheWS, "run")
-        } else {
-            vscode.window.showWarningMessage(`No bridge started or no connections to the current bridge`);
-        }
-    };
+    // const runHandler = () => {
+    //     if (cacheWS != null) {
+    //         vscode.window.showInformationMessage(`Running Jellycut on connected device`);
+    //         updateApp(cacheWS, "run")
+    //     } else {
+    //         vscode.window.showWarningMessage(`No bridge started or no connections to the current bridge`);
+    //     }
+    // };
 
-    context.subscriptions.push(vscode.commands.registerCommand("jellycuts-support.run", runHandler));
+    // context.subscriptions.push(vscode.commands.registerCommand("jellycuts-support.run", runHandler));
 
-    const exportHandler = () => {
-        if (cacheWS != null) {
-            vscode.window.showInformationMessage(`Exporting Jellycut to Shortcuts`);
-            updateApp(cacheWS, "export")
-        } else {
-            vscode.window.showWarningMessage(`No bridge started or no connections to the current bridge`);
-        }
-    };
+    // const exportHandler = () => {
+    //     if (cacheWS != null) {
+    //         vscode.window.showInformationMessage(`Exporting Jellycut to Shortcuts`);
+    //         updateApp(cacheWS, "export")
+    //     } else {
+    //         vscode.window.showWarningMessage(`No bridge started or no connections to the current bridge`);
+    //     }
+    // };
 
-    context.subscriptions.push(vscode.commands.registerCommand("jellycuts-support.export", exportHandler));
+    // context.subscriptions.push(vscode.commands.registerCommand("jellycuts-support.export", exportHandler));
 }
 
 function updateApp(ws, type) {
-    output.clear();
-    const editor = vscode.window.activeTextEditor;
-    var fileName = path.basename(editor.document.uri.fsPath);
+    if (type != 'get') {
+        output.clear();
+        const editor = vscode.window.activeTextEditor;
+        var fileName = path.basename(editor.document.uri.fsPath);
 
-    if (editor) {
-        let document = editor.document;
-        const documentText = document.getText();
-        var dictionary = { "fileName": fileName, "text": documentText, "type": type }
-        ws.send(JSON.stringify(dictionary));
+        if (editor) {
+            let document = editor.document;
+            const documentText = document.getText();
+            var dictionary = { "fileName": fileName, "text": documentText, "type": type }
+            ws.send(JSON.stringify(dictionary));
+        }
+    } else {
+        vscode.workspace.findFiles('**/*.jelly').then((uri => {
+                console.log('Updating Files')
+                let files = []
+                uri.forEach(element => {
+                    try {
+                        const data = fs.readFileSync(element.fsPath, 'utf8')
+                        files.push({ 'path': element.path, 'name': path.basename(element.path).replace('.jelly', ''), 'text': data })
+                    } catch (err) {
+                        console.error(err)
+                    }
+                });
+                var dictionary = { "type": 'receiveFiles', 'files': files }
+                ws.send(JSON.stringify(dictionary))
+            }))
+            // ws.send(JSON.stringify(dictionary));
     }
 }
-
+/*
+struct JFile: Codable {
+    var path: String
+    var name: String
+    var text: String
+}
+*/
 // this method is called when your extension is deactivated
 function deactivate() {
     vscode.window.showInformationMessage(`Jellycuts bridge closed`);

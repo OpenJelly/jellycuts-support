@@ -16,12 +16,11 @@ Below are the available commands. To run hit cmd+shift+p (mac) or ctrl+shift+p a
     - Opens a Jellycuts Bridge. This is a websocket server running on port 8080 that you can connect to using the Jellycuts App.
 2. Close Jellycuts Bridge
     - Closes all connections to the current Jellycuts Bridge.
-3. Run in Jellycuts
-    - Sends a run command to the Jellycuts app that will run your current script.
-4. Export to Shortcuts
-    - Sends an export command to the Jellycuts app. This will compile and open your Jellycut in the Shortcuts app.
 
 # Release Notes
+### 1.0.1
+Updated to a new version of the bridge to work with Jellycuts 1.0
+
 ### 1.0.0
 Fixed an issue with comment highlighting
 
