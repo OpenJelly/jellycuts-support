@@ -12,13 +12,13 @@ output.show(true);
 
 /* MARK: Initializing file system watcher to update available projects */
 let watcher = vscode.workspace.createFileSystemWatcher("**/*.jelly");
-watcher.onDidChange(uri => {
+watcher.onDidChange(() => {
     updateApp(cacheWS, "get")
 })
-watcher.onDidCreate(uri => {
+watcher.onDidCreate(() => {
     updateApp(cacheWS, "get")
 })
-watcher.onDidDelete(uri => {
+watcher.onDidDelete(() => {
     updateApp(cacheWS, "get")
 })
 
@@ -74,6 +74,10 @@ function activate(context) {
         vscode.window.showInformationMessage(`Closed Jellycuts Bridge`);
     };
     context.subscriptions.push(vscode.commands.registerCommand(closeServerCommand, closeServerHandler));
+
+    context.subscriptions.push(vscode.workspace.onDidSaveTextDocument(() => {
+        updateApp(cacheWS, "get")
+    }));
 
     // const runHandler = () => {
     //     if (cacheWS != null) {

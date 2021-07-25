@@ -2,7 +2,7 @@
     "name": "jelly-language-support",
     "displayName": "Jellycuts Support",
     "description": "Support for the Jellycuts iOS app.",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "icon": "images/icon.png",
     "publisher": "ActuallyZach",
     "engines": {
@@ -14,8 +14,6 @@
     "activationEvents": [
         "onCommand:jellycuts-support.runserver",
         "onCommand:jellycuts-support.closeserver",
-        "onCommand:jellycuts-support.export",
-        "onCommand:jellycuts-support.run",
         "onLanguage:Jelly"
     ],
     "main": "./extension.js",

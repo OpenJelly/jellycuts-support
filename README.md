@@ -1,5 +1,5 @@
 # Jellycuts Support
-This extension allows you to use the Jelly language and connect directly into the Jellycuts iOS app.s
+This extension allows you to use the Jelly language and connect directly into the Jellycuts iOS app.
 
 ## Jelly language support
 ### Features
@@ -18,6 +18,9 @@ Below are the available commands. To run hit cmd+shift+p (mac) or ctrl+shift+p a
     - Closes all connections to the current Jellycuts Bridge.
 
 # Release Notes
+### 1.0.2
+Files are now updated on file save
+
 ### 1.0.1
 Updated to a new version of the bridge to work with Jellycuts 1.0
 
