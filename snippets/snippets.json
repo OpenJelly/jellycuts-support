@@ -6,1566 +6,12 @@
         ],
         "description": "A default template for a Jelly "
     },
-	"list": {
-		"prefix": "List",
-		"body": [
-			"list(items: $0)"
-		],
-		"description": "Creates a list."
-	},
-	"attendeeDetail": {
-		"prefix": "Get Attendee Detail",
-		"body": [
-			"attendeeDetail(detail: $0, attendee: $1)"
-		],
-		"description": "Gets a detail about the given event attendee."
-	},
-	"shortcutDetail": {
-		"prefix": "Get Shortcut Details",
-		"body": [
-			"shortcutDetail(detail: $0, input: $1)"
-		],
-		"description": "Gets a detail about a Shortcut."
-	},
-	"setFlashlight": {
-		"prefix": "Set Flashlight",
-		"body": [
-			"setFlashlight(state: $0, level: $1)"
-		],
-		"description": "Sets the flashlight state and brightness."
-	},
-	"wifiDetails": {
-		"prefix": "Get Wi-Fi Details",
-		"body": [
-			"wifiDetails(detail: $0)"
-		],
-		"description": "Gets a detail about the devices WiFi."
-	},
-	"expandURL": {
-		"prefix": "Expand URL",
-		"body": [
-			"expandURL(url: $0)"
-		],
-		"description": "Expands the given URL."
-	},
-	"getContactsFrom": {
-		"prefix": "Get Contacts From Input",
-		"body": [
-			"getContactsFrom(input: $0)"
-		],
-		"description": "Gets contacts from the given input."
-	},
-	"getName": {
-		"prefix": "Get Name",
-		"body": [
-			"getName(input: $0)"
-		],
-		"description": "Get's the name of the given input."
-	},
-	"createNote": {
-		"prefix": "Create Note",
-		"body": [
-			"createNote(text: $0, show: $1)"
-		],
-		"description": "Creates a note with the given input."
-	},
-	"removeEvents": {
-		"prefix": "Remove Events",
-		"body": [
-			"removeEvents(events: $0, includeFuture: $1)"
-		],
-		"description": "Removes the given events from the calendar."
-	},
-	"getLocation": {
-		"prefix": "Get Location",
-		"body": [
-			"getLocation(input: $0)"
-		],
-		"description": "Gets the devices current location."
-	},
-	"removeFromAlbum": {
-		"prefix": "Remove From Album",
-		"body": [
-			"removeFromAlbum(image: $0, album: $1)"
-		],
-		"description": "Removes an image from an album."
-	},
-	"detectLanguage": {
-		"prefix": "Detect Language",
-		"body": [
-			"detectLanguage(text: $0)"
-		],
-		"description": "Detects the language of the given text."
-	},
 	"articleDetail": {
 		"prefix": "Get Article Detail",
 		"body": [
 			"articleDetail(detail: $0, article: $1)"
 		],
 		"description": "Gets a detail about the given article."
-	},
-	"randomNumber": {
-		"prefix": "Random Number",
-		"body": [
-			"randomNumber(min: $0, max: $1)"
-		],
-		"description": "Get's a random number between the provided max and min."
-	},
-	"getTimeBetween": {
-		"prefix": "Get Time Between Dates",
-		"body": [
-			"getTimeBetween(first: $0, second: $1, interval: $2)"
-		],
-		"description": "Retrieves the time between the two dates."
-	},
-	"getClass": {
-		"prefix": "Get Object of Class",
-		"body": [
-			"getClass(input: $0, class: $1)"
-		],
-		"description": "Gets an object with the defined class."
-	},
-	"resizeImage": {
-		"prefix": "Resize Image",
-		"body": [
-			"resizeImage(image: $0, height: $1, width: $2)"
-		],
-		"description": "Resizes an image to a certain height and width."
-	},
-	"shareEXT": {
-		"prefix": "Share With Extensions",
-		"body": [
-			"shareEXT(file: $0)"
-		],
-		"description": "Shares input with extensions."
-	},
-	"showNote": {
-		"prefix": "Show Note",
-		"body": [
-			"showNote(note: $0)"
-		],
-		"description": "Shows the provided note."
-	},
-	"getLastPhoto": {
-		"prefix": "Get Last Photo",
-		"body": [
-			"getLastPhoto(count: $0, screenshots: $1)"
-		],
-		"description": "Retrieves the last n photos in your library. You can optionally include screenshots or not."
-	},
-	"filterMusic": {
-		"prefix": "Filter Music",
-		"body": [
-			"filterMusic(filter: $0)"
-		],
-		"description": "Filters the given music. Placing All Music in the input will allow you to filter all of your music."
-	},
-	"getDateFrom": {
-		"prefix": "Get Date From Input",
-		"body": [
-			"getDateFrom(input: $0)"
-		],
-		"description": "Gets the dates from the given input."
-	},
-	"keysFrom": {
-		"prefix": "Get All Keys from Dictionary",
-		"body": [
-			"keysFrom(dictionary: $0)"
-		],
-		"description": "Get all of the keys from a dictionary."
-	},
-	"text": {
-		"prefix": "Text",
-		"body": [
-			"text(text: $0)"
-		],
-		"description": "Declares text. Basically just a string."
-	},
-	"cellularDetails": {
-		"prefix": "Get Cellular Details",
-		"body": [
-			"cellularDetails(detail: $0)"
-		],
-		"description": "Gets a detail about the devices Cellular Connection."
-	},
-	"downloadURL": {
-		"prefix": "Get Contents of URL",
-		"body": [
-			"downloadURL(url: $0, method: $1, headers: $2, requestType: $3, requestJSON: $4, requestVar: $5)"
-		],
-		"description": "Downloads the contents at the given URL. When making a form or JSON request, use the request JSON parameter. When using a file request type, use the request variable parameter."
-	},
-	"filterFiles": {
-		"prefix": "Filter File",
-		"body": [
-			"filterFiles(filter: $0)"
-		],
-		"description": "Filters the given files."
-	},
-	"quicklook": {
-		"prefix": "Quicklook",
-		"body": [
-			"quicklook(input: $0)"
-		],
-		"description": "Quicklooks the provided input."
-	},
-	"decodeURL": {
-		"prefix": "Decode URL",
-		"body": [
-			"decodeURL(url: $0)"
-		],
-		"description": "Converts URL encoded text to normal characters."
-	},
-	"filterNotes": {
-		"prefix": "Filter Notes",
-		"body": [
-			"filterNotes(filter: $0)"
-		],
-		"description": "Filters the given notes. Placing All Notes in the input will allow you to filter all of your notes."
-	},
-	"selectContact": {
-		"prefix": "Select Contact",
-		"body": [
-			"selectContact(multiple: $0)"
-		],
-		"description": "Allows you to select a contact."
-	},
-	"dictionary": {
-		"prefix": "Dictionary",
-		"body": [
-			"dictionary(json: $0)"
-		],
-		"description": "Creates a dictionary based on the given JSON. JSON can be replaced with a dictionary from the dictionary builder."
-	},
-	"extractArchive": {
-		"prefix": "Extract Archive",
-		"body": [
-			"extractArchive(input: $0)"
-		],
-		"description": "Extracts the given archive."
-	},
-	"setClipboard": {
-		"prefix": "Set Clipboard",
-		"body": [
-			"setClipboard(variable: $0, local: $1, expiration: $2)"
-		],
-		"description": "Sets the devices clipboard to the input."
-	},
-	"contentGraph": {
-		"prefix": "View Content Graph",
-		"body": [
-			"contentGraph(input: $0)"
-		],
-		"description": "Displays a content graph of variable."
-	},
-	"formatNumber": {
-		"prefix": "Format Number",
-		"body": [
-			"formatNumber(number: $0, places: $1)"
-		],
-		"description": "Formats a number to the given decimal places."
-	},
-	"setValue": {
-		"prefix": "Set Dictionary Value",
-		"body": [
-			"setValue(key: $0, value: $1, dictionary: $2)"
-		],
-		"description": "Sets a key's value in a dictionary."
-	},
-	"shazamDetail": {
-		"prefix": "Get Shazam Detail",
-		"body": [
-			"shazamDetail(detail: $0, shazam: $1)"
-		],
-		"description": "Gets a detail about the given Shazam."
-	},
-	"setBrightness": {
-		"prefix": "Set Brightness",
-		"body": [
-			"setBrightness(value: $0)"
-		],
-		"description": "Sets the devices bluetooth to the given double."
-	},
-	"getRSSItems": {
-		"prefix": "Get RSS Items From Feed",
-		"body": [
-			"getRSSItems(url: $0, count: $1)"
-		],
-		"description": "Gets the RSS items from an RSS Feed."
-	},
-	"encode": {
-		"prefix": "Encode Base64",
-		"body": [
-			"encode(input: $0)"
-		],
-		"description": "Encodes the given input into base64 without line breaks."
-	},
-	"maskImage": {
-		"prefix": "Mask Image",
-		"body": [
-			"maskImage(image: $0, mode: $1, mask: $2)"
-		],
-		"description": "Masks an image."
-	},
-	"encodeMedia": {
-		"prefix": "Encode Media",
-		"body": [
-			"encodeMedia(media: $0, size: $1, speed: $2, customSpeed: $3, title: $4, artist: $5, album: $6, genre: $7, year: $8, artwork: $9)"
-		],
-		"description": "Encodes the given media into a video."
-	},
-	"getHeaders": {
-		"prefix": "Get URL Headers",
-		"body": [
-			"getHeaders(url: $0)"
-		],
-		"description": "Retrieves the headers at a certain URL."
-	},
-	"locationDetail": {
-		"prefix": "Get Location Detail",
-		"body": [
-			"locationDetail(detail: $0, location: $1)"
-		],
-		"description": "Gets a detail about the given location."
-	},
-	"showReminderList": {
-		"prefix": "Show Reminders List",
-		"body": [
-			"showReminderList(list: $0)"
-		],
-		"description": "Shows the given reminder list."
-	},
-	"toggleAirplaneMode": {
-		"prefix": "Toggle Airplane Mode",
-		"body": [
-			"toggleAirplaneMode()"
-		],
-		"description": "Toggles airplane mode."
-	},
-	"setWiFi": {
-		"prefix": "Set WiFi",
-		"body": [
-			"setWiFi(state: $0)"
-		],
-		"description": "Sets the state of the devices WiFi connection."
-	},
-	"emojiName": {
-		"prefix": "Emoji Name",
-		"body": [
-			"emojiName(input: $0)"
-		],
-		"description": "Retrieves the name of the Emoji."
-	},
-	"rotateImage": {
-		"prefix": "Rotate Image",
-		"body": [
-			"rotateImage(image: $0, degrees: $1)"
-		],
-		"description": "Rotates an image a certain degree."
-	},
-	"play": {
-		"prefix": "Play Music",
-		"body": [
-			"play(behavior: $0, source: $1)"
-		],
-		"description": "Plays or pauses the current music."
-	},
-	"sampleDetail": {
-		"prefix": "Get Health Sample Detail",
-		"body": [
-			"sampleDetail(detail: $0, sample: $1)"
-		],
-		"description": "Gets a detail about the given health sample."
-	},
-	"getIP": {
-		"prefix": "Get IP Address",
-		"body": [
-			"getIP(source: $0, type: $1)"
-		],
-		"description": "Gets the devices IP address."
-	},
-	"pageDetail": {
-		"prefix": "Get Page Detail",
-		"body": [
-			"pageDetail(detail: $0, webpage: $1)"
-		],
-		"description": "Gets a detail about the given Apple Pages Document."
-	},
-	"createFolder": {
-		"prefix": "Create Folder",
-		"body": [
-			"createFolder(path: $0)"
-		],
-		"description": "Create folder at a path."
-	},
-	"getArticle": {
-		"prefix": "Get Article",
-		"body": [
-			"getArticle(url: $0)"
-		],
-		"description": "Retrieves an article using safari reader."
-	},
-	"toggleAppearance": {
-		"prefix": "Toggle Device Appearance",
-		"body": [
-			"toggleAppearance()"
-		],
-		"description": "Toggles the devices appearance"
-	},
-	"getallalarms": {
-		"prefix": "Get All Alarms",
-		"body": [
-			"getallalarms(show: $0)"
-		],
-		"description": "Retrieves all of your alarms."
-	},
-	"calculate": {
-		"prefix": "Calculate Expression",
-		"body": [
-			"calculate(input: $0)"
-		],
-		"description": "Calculates an expression"
-	},
-	"waitToReturn": {
-		"prefix": "Wait to return",
-		"body": [
-			"waitToReturn()"
-		],
-		"description": "Waits for you to return back to the app to continue execution."
-	},
-	"richTextFromMarkdown": {
-		"prefix": "Make Rich Text From Markdown",
-		"body": [
-			"richTextFromMarkdown(markdown: $0)"
-		],
-		"description": "Makes rich text from Markdown."
-	},
-	"lowPowerMode": {
-		"prefix": "Set Low Power Mode",
-		"body": [
-			"lowPowerMode(state: $0)"
-		],
-		"description": "Sets the devices low power mode."
-	},
-	"artistDetail": {
-		"prefix": "Get iTunes Artist Detail",
-		"body": [
-			"artistDetail(property: $0, note: $1)"
-		],
-		"description": "Gets a detail about the iTunes artist."
-	},
-	"userActivity": {
-		"prefix": "User Activity",
-		"body": [
-			"userActivity()"
-		],
-		"description": "This is just a blank action that does not do anything."
-	},
-	"clearUpNext": {
-		"prefix": "Clear Up Next",
-		"body": [
-			"clearUpNext()"
-		],
-		"description": "Clears the up next queue."
-	},
-	"recordAudio": {
-		"prefix": "Record Audio",
-		"body": [
-			"recordAudio(quality: $0, start: $1, end: $2, duration: $3)"
-		],
-		"description": "Records audio with the given parameters."
-	},
-	"changeWallpaper": {
-		"prefix": "Change Wallpaper",
-		"body": [
-			"changeWallpaper(image: $0, location: $1, preview: $2)"
-		],
-		"description": "Changes the devices wallpaper."
-	},
-	"htmlFromRichText": {
-		"prefix": "Make HTML From Rich Text",
-		"body": [
-			"htmlFromRichText(text: $0, fullDocument: $1)"
-		],
-		"description": "Creates an HTML document from the provided Rich Text."
-	},
-	"share": {
-		"prefix": "Share",
-		"body": [
-			"share(file: $0)"
-		],
-		"description": "Shares the input."
-	},
-	"wait": {
-		"prefix": "Wait",
-		"body": [
-			"wait(seconds: $0)"
-		],
-		"description": "Waits a specified amount of seconds."
-	},
-	"shazamIt": {
-		"prefix": "Shazam It",
-		"body": [
-			"shazamIt()"
-		],
-		"description": "Starts a Shazam."
-	},
-	"searchWeb": {
-		"prefix": "Search Web",
-		"body": [
-			"searchWeb(text: $0, destination: $1)"
-		],
-		"description": "Searches the desired browser ."
-	},
-	"addUpNext": {
-		"prefix": "Add Music Up Next",
-		"body": [
-			"addUpNext(music: $0, place: $1)"
-		],
-		"description": "Adds the provided music to the up next queue."
-	},
-	"getLastImport": {
-		"prefix": "Get Last Photo Import",
-		"body": [
-			"getLastImport()"
-		],
-		"description": "Retrieves the last photo you imported."
-	},
-	"setOrientationLock": {
-		"prefix": "Set Orientation Lock",
-		"body": [
-			"setOrientationLock(state: $0)"
-		],
-		"description": "Sets the state of the devices Orientation Lock."
-	},
-	"getShortcuts": {
-		"prefix": "Get Shortcuts",
-		"body": [
-			"getShortcuts()"
-		],
-		"description": "Retrieves a list of all of your shortcuts."
-	},
-	"getCurrentSong": {
-		"prefix": "Get Current Song",
-		"body": [
-			"getCurrentSong()"
-		],
-		"description": "Retreives the current song playing."
-	},
-	"addFrameToGIF": {
-		"prefix": "Add Frame To GIF",
-		"body": [
-			"addFrameToGIF(photo: $0, gif: $1, delay: $2, autoSize: $3, width: $4, height: $5)"
-		],
-		"description": "Adds the given photo to a GIF as a frame."
-	},
-	"urlComponent": {
-		"prefix": "Get URL Component",
-		"body": [
-			"urlComponent(url: $0, component: $1)"
-		],
-		"description": "Retrieves component about URL."
-	},
-	"statistic": {
-		"prefix": "Calculate Statistic",
-		"body": [
-			"statistic(input: $0, operation: $1)"
-		],
-		"description": "Calculates a statistic."
-	},
-	"setDND": {
-		"prefix": "Set Do Not Disturb",
-		"body": [
-			"setDND(state: $0)"
-		],
-		"description": "Sets the devices Do Not Disturb to the given boolean."
-	},
-	"combineImage": {
-		"prefix": "Combine Image",
-		"body": [
-			"combineImage(images: $0, mode: $1, spacing: $2)"
-		],
-		"description": "Combines an image."
-	},
-	"filterContacts": {
-		"prefix": "Filter Contacts",
-		"body": [
-			"filterContacts(filter: $0)"
-		],
-		"description": "Filters the given contacts. Placing All Contacts in the input will allow you to filter all of your contacts."
-	},
-	"podcastEpisodeDetail": {
-		"prefix": "Get Podcast Episode Detail",
-		"body": [
-			"podcastEpisodeDetail(detail: $0, episode: $1)"
-		],
-		"description": "Gets a detail about the given Podcast episode. Checkout ATP btw it's a super good show."
-	},
-	"convertImage": {
-		"prefix": "Convert Image",
-		"body": [
-			"convertImage(image: $0, format: $1, metadata: $2, quality: $3)"
-		],
-		"description": "Converts an image to a new format."
-	},
-	"getPlaylist": {
-		"prefix": "Get Playlist",
-		"body": [
-			"getPlaylist(name: $0)"
-		],
-		"description": "Retrieves a playlist."
-	},
-	"makeGIF": {
-		"prefix": "Create GIF",
-		"body": [
-			"makeGIF(content: $0, frameTime: $1, loopOn: $2, loopCount: $3, autoSize: $4, width: $5, height: $6)"
-		],
-		"description": "Creates a GIF from the provided input."
-	},
-	"removeReminders": {
-		"prefix": "Remove Reminders",
-		"body": [
-			"removeReminders(reminders: $0)"
-		],
-		"description": "Removes the given reminders."
-	},
-	"makeArchive": {
-		"prefix": "Make Archive",
-		"body": [
-			"makeArchive(input: $0, type: $1)"
-		],
-		"description": "Makes an archive of the given file."
-	},
-	"playMusic": {
-		"prefix": "Play Music",
-		"body": [
-			"playMusic(music: $0, shuffle: $1, repeat: $2)"
-		],
-		"description": "Start's playing the provided music."
-	},
-	"count": {
-		"prefix": "Count",
-		"body": [
-			"count(type: $0, input: $1)"
-		],
-		"description": "Counts different things within the given input."
-	},
-	"productDetail": {
-		"prefix": "Get Product Detail",
-		"body": [
-			"productDetail(detail: $0, product: $1)"
-		],
-		"description": "Gets a detail about the given product."
-	},
-	"importShortcut": {
-		"prefix": "Import Shortcut",
-		"body": [
-			"importShortcut(file: $0)"
-		],
-		"description": "Import a shortcut into Jellycuts. Action for Jellycuts."
-	},
-	"getClipboard": {
-		"prefix": "Get Clipboard",
-		"body": [
-			"getClipboard()"
-		],
-		"description": "Get's the devices clipboard."
-	},
-	"urlContents": {
-		"prefix": "Contents Of URL",
-		"body": [
-			"urlContents(url: $0)"
-		],
-		"description": "Retrieves the contents of a url. Returns a webpage."
-	},
-	"selectPhoto": {
-		"prefix": "Select Photo",
-		"body": [
-			"selectPhoto(types: $0, multiple: $1)"
-		],
-		"description": "Allows you to select a photo."
-	},
-	"selectPhone": {
-		"prefix": "Select Phone Number",
-		"body": [
-			"selectPhone()"
-		],
-		"description": "Allows you to select a phone number."
-	},
-	"getNumbersFrom": {
-		"prefix": "Get Numbers From Input",
-		"body": [
-			"getNumbersFrom(text: $0)"
-		],
-		"description": "Detects the numbers in the given input."
-	},
-	"overlayImage": {
-		"prefix": "Overlay Image",
-		"body": [
-			"overlayImage(image1: $0, image2: $1, editor: $2, height: $3, width: $4, position: $5, opacity: $6, rotation: $7)"
-		],
-		"description": "Overlays one image onto another image."
-	},
-	"getAddressFrom": {
-		"prefix": "Get Address From Input",
-		"body": [
-			"getAddressFrom(input: $0)"
-		],
-		"description": "Gets addresses from the given input."
-	},
-	"runShortcut": {
-		"prefix": "Run Shortcut",
-		"body": [
-			"runShortcut(name: $0, input: $1, show: $2)"
-		],
-		"description": "Runs the given shortcut."
-	},
-	"setVoiceData": {
-		"prefix": "Set Voice Data",
-		"body": [
-			"setVoiceData(mode: $0, sim: $1)"
-		],
-		"description": "Set's the devices cellular data settings. Can be used to change the current sim, and cell mode (4G, LTE, 5G)."
-	},
-	"encodeURL": {
-		"prefix": "Encode URL",
-		"body": [
-			"encodeURL(url: $0)"
-		],
-		"description": "Encodes the given text in URL allowed characters."
-	},
-	"selectedEmail": {
-		"prefix": "Select Email",
-		"body": [
-			"selectedEmail()"
-		],
-		"description": "Allows you to select a contact's email."
-	},
-	"formatDate": {
-		"prefix": "Format Date",
-		"body": [
-			"formatDate(date: $0, dStyle: $1, tStyle: $2, custom: $3, isoTime: $4)"
-		],
-		"description": "Formats the given date."
-	},
-	"appDetail": {
-		"prefix": "Get App Detail",
-		"body": [
-			"appDetail(detail: $0, app: $1)"
-		],
-		"description": "Gets a detail about the given app."
-	},
-	"filterLocations": {
-		"prefix": "Filter Locations",
-		"body": [
-			"filterLocations(filter: $0)"
-		],
-		"description": "Filters the given locations."
-	},
-	"createQR": {
-		"prefix": "Create QR Code",
-		"body": [
-			"createQR(text: $0, correction: $1)"
-		],
-		"description": "Creates a QR for the given text."
-	},
-	"showDefinition": {
-		"prefix": "Show Definition",
-		"body": [
-			"showDefinition(text: $0)"
-		],
-		"description": "Gets the definition of a word."
-	},
-	"url": {
-		"prefix": "URL",
-		"body": [
-			"url(url: $0)"
-		],
-		"description": "Just a URL."
-	},
-	"appearanceDetail": {
-		"prefix": "Get Appearance Detail",
-		"body": [
-			"appearanceDetail(detail: $0, appearance: $1)"
-		],
-		"description": "Gets a detail about the given device Appearance."
-	},
-	"takeVideo": {
-		"prefix": "Take Video",
-		"body": [
-			"takeVideo(camera: $0, quality: $1, start: $2)"
-		],
-		"description": "Takes a video."
-	},
-	"trimVideo": {
-		"prefix": "Trim Video",
-		"body": [
-			"trimVideo(video: $0)"
-		],
-		"description": "Trims a video."
-	},
-	"createPlaylist": {
-		"prefix": "Create Playlist",
-		"body": [
-			"createPlaylist(name: $0, music: $1, author: $2, description: $3)"
-		],
-		"description": "Creates a playlist with the given music, name, author and description."
-	},
-	"getLastVideo": {
-		"prefix": "Get Last Video",
-		"body": [
-			"getLastVideo(count: $0)"
-		],
-		"description": "Retrieves the last n videos you recorded."
-	},
-	"toggleLowPowerMode": {
-		"prefix": "Toggle Low Power Mode",
-		"body": [
-			"toggleLowPowerMode()"
-		],
-		"description": "Toggles low power mode."
-	},
-	"showInCalendar": {
-		"prefix": "Show in Calendar",
-		"body": [
-			"showInCalendar(event: $0)"
-		],
-		"description": "Shows the provided event on the calendar."
-	},
-	"getPhonesFrom": {
-		"prefix": "Get Phone Numbers From Input",
-		"body": [
-			"getPhonesFrom(input: $0)"
-		],
-		"description": "Gets phone numbers from the given input."
-	},
-	"round": {
-		"prefix": "Round Number",
-		"body": [
-			"round(number: $0, roundTo: $1, mode: $2)"
-		],
-		"description": "Rounds a number depending on the parameters."
-	},
-	"toggleOrientationLock": {
-		"prefix": "Toggle Orientation Lock",
-		"body": [
-			"toggleOrientationLock()"
-		],
-		"description": "Toggles the state of the devices Orientation Lock."
-	},
-	"vibrate": {
-		"prefix": "Vibrate Device",
-		"body": [
-			"vibrate()"
-		],
-		"description": "Vibrates the device."
-	},
-	"timer": {
-		"prefix": "Start Timer",
-		"body": [
-			"timer(duration: $0)"
-		],
-		"description": "Starts a timer for the given time."
-	},
-	"getFile": {
-		"prefix": "Get File",
-		"body": [
-			"getFile(picker: $0, path: $1, error: $2, multiple: $3)"
-		],
-		"description": "Retrieves the file at a given path. It can also open a document picker if there is no path provided and the picker parameter is set to true."
-	},
-	"askForInput": {
-		"prefix": "Ask for Input",
-		"body": [
-			"askForInput(prompt: $0, type: $1, default: $2)"
-		],
-		"description": "Asks the user for input input."
-	},
-	"getURLSFromInput": {
-		"prefix": "Get URLS From Input",
-		"body": [
-			"getURLSFromInput(text: $0)"
-		],
-		"description": "Retrieves URLS from the input."
-	},
-	"runJavascriptOnWebpage": {
-		"prefix": "Run Javascript on Webpage",
-		"body": [
-			"runJavascriptOnWebpage(url: $0, javascript: $1)"
-		],
-		"description": "Runs the given javascript on a webpage."
-	},
-	"xCallbackURL": {
-		"prefix": "Open X-Callback URL",
-		"body": [
-			"xCallbackURL(url: $0, custom: $1, success: $2, cancel: $3, error: $4, customXSuccess: $5, xSuccess: $6)"
-		],
-		"description": "Run an x-callback URL."
-	},
-	"matchText": {
-		"prefix": "Match Text",
-		"body": [
-			"matchText(text: $0, regex: $1, caseSensitive: $2)"
-		],
-		"description": "Matches text in the input based on regex."
-	},
-	"getType": {
-		"prefix": "Get Type",
-		"body": [
-			"getType(input: $0)"
-		],
-		"description": "Get's the type of the given input."
-	},
-	"getFileLink": {
-		"prefix": "Get File Link",
-		"body": [
-			"getFileLink(file: $0)"
-		],
-		"description": "Gets the iCloud link to a certain file."
-	},
-	"hash": {
-		"prefix": "Hash",
-		"body": [
-			"hash(input: $0, type: $1)"
-		],
-		"description": "Hashes the provided input."
-	},
-	"podcastDetail": {
-		"prefix": "Get Podcast Show Detail",
-		"body": [
-			"podcastDetail(detail: $0, show: $1)"
-		],
-		"description": "Gets a detail about the given Podcast show. Checkout Launched it's a super good show."
-	},
-	"getImagesFrom": {
-		"prefix": "Get Images From Input",
-		"body": [
-			"getImagesFrom(input: $0)"
-		],
-		"description": "Gets Images from the given input."
-	},
-	"markdownFromRich": {
-		"prefix": "Make Markdown From Rich Text",
-		"body": [
-			"markdownFromRich(text: $0)"
-		],
-		"description": "Makes markdown from the given rich text."
-	},
-	"uploadPhotos": {
-		"prefix": "Upload Photos To Shared Album",
-		"body": [
-			"uploadPhotos(photos: $0)"
-		],
-		"description": "Uploads the given photos to the shared photos album."
-	},
-	"number": {
-		"prefix": "Number",
-		"body": [
-			"number(value: $0)"
-		],
-		"description": "Declares a number."
-	},
-	"nothing": {
-		"prefix": "Nothing",
-		"body": [
-			"nothing()"
-		],
-		"description": "Does nothing."
-	},
-	"searchItunes": {
-		"prefix": "Search iTunes",
-		"body": [
-			"searchItunes(query: $0, category: $1, by: $2, results: $3, count: $4)"
-		],
-		"description": "Searches iTunes based of the parameters you provide.."
-	},
-	"appendFile": {
-		"prefix": "Append File",
-		"body": [
-			"appendFile(input: $0, path: $1, newLine: $2)"
-		],
-		"description": "Appends contents to the end of a file."
-	},
-	"setName": {
-		"prefix": "Set Name",
-		"body": [
-			"setName(input: $0, name: $1, includeExtension: $2)"
-		],
-		"description": "Sets the name of an item."
-	},
-	"date": {
-		"prefix": "Date",
-		"body": [
-			"date(date: $0)"
-		],
-		"description": "Creates a Date."
-	},
-	"filterCalendar": {
-		"prefix": "Filter Calendar Events",
-		"body": [
-			"filterCalendar(filter: $0)"
-		],
-		"description": "Filters the given events. Placing All Events in the input will allow you to filter all of your calendar events."
-	},
-	"changeCase": {
-		"prefix": "Change Text Case",
-		"body": [
-			"changeCase(text: $0, case: $1)"
-		],
-		"description": "Changes the case of text."
-	},
-	"batteryLevel": {
-		"prefix": "Battery Level",
-		"body": [
-			"batteryLevel()"
-		],
-		"description": "Retrieves the devices battery level."
-	},
-	"videoFromGif": {
-		"prefix": "Make Video from GIF",
-		"body": [
-			"videoFromGif(gif: $0, loop: $1)"
-		],
-		"description": "Creates a video from a GIF. It's pronounced GIF"
-	},
-	"debugShortcut": {
-		"prefix": "Debug Content Attribution",
-		"body": [
-			"debugShortcut()"
-		],
-		"description": "A weird debug action."
-	},
-	"openShortcut": {
-		"prefix": "Open Shortcut",
-		"body": [
-			"openShortcut(name: $0)"
-		],
-		"description": "Opens the shortcut editor to the specified Shortcut."
-	},
-	"facetime": {
-		"prefix": "Facetime",
-		"body": [
-			"facetime(type: $0, contact: $1)"
-		],
-		"description": "Facetimes the given contact."
-	},
-	"setCellular": {
-		"prefix": "Set Cellular",
-		"body": [
-			"setCellular(state: $0)"
-		],
-		"description": "Sets the state of the devices cellular connection."
-	},
-	"openApp": {
-		"prefix": "Open App",
-		"body": [
-			"openApp(id: $0)"
-		],
-		"description": "Opens an app on the device."
-	},
-	"math": {
-		"prefix": "Math",
-		"body": [
-			"math(input: $0, operation: $1, operand: $2, scientific: $3)"
-		],
-		"description": "Solves a math equation. You can use +, -, ×, ÷, and … as operations. When using … you can apply a scientific operation type."
-	},
-	"getCurrentConditions": {
-		"prefix": "Get Current Conditions",
-		"body": [
-			"getCurrentConditions()"
-		],
-		"description": "Gets the current weather conditions."
-	},
-	"translateText": {
-		"prefix": "Translate Text",
-		"body": [
-			"translateText(text: $0, from: $1, to: $2)"
-		],
-		"description": "Translates the given text from one language to another."
-	},
-	"getPodcasts": {
-		"prefix": "Get Podcasts",
-		"body": [
-			"getPodcasts()"
-		],
-		"description": "Retreives all the podcasts in your library."
-	},
-	"addToPlaylist": {
-		"prefix": "Add to Playlist",
-		"body": [
-			"addToPlaylist(music: $0, playlist: $1)"
-		],
-		"description": "Adds the provided music to the provided playlist."
-	},
-	"valuesFrom": {
-		"prefix": "Get All Values from Dictionary",
-		"body": [
-			"valuesFrom(dictionary: $0)"
-		],
-		"description": "Get all of the values from a dictionary."
-	},
-	"getItemFromList": {
-		"prefix": "Get Item From List",
-		"body": [
-			"getItemFromList(list: $0, type: $1, index: $2, startIndex: $3, endIndex: $4)"
-		],
-		"description": "Gets an item from the given list. If you choose to get items in range you can use the startIndex and endIndex to define the range, you do not need to give it an index."
-	},
-	"grabJellycut": {
-		"prefix": "Grab Jellycut",
-		"body": [
-			"grabJellycut()"
-		],
-		"description": "Get's the plist from the latest exported Jellycut."
-	},
-	"playPodcast": {
-		"prefix": "Play Podcast",
-		"body": [
-			"playPodcast(podcast: $0)"
-		],
-		"description": "Subscribes to the Podcast at the given feed url in Apple Podcasts."
-	},
-	"formatSize": {
-		"prefix": "Format Size",
-		"body": [
-			"formatSize(size: $0, format: $1, units: $2)"
-		],
-		"description": "Formats the size of a file."
-	},
-	"imageDetail": {
-		"prefix": "Get Image Detail",
-		"body": [
-			"imageDetail(detail: $0, image: $1)"
-		],
-		"description": "Gets a detail about the given image."
-	},
-	"createPDF": {
-		"prefix": "Create PDF",
-		"body": [
-			"createPDF(input: $0, loop: $1, singlePageNumb: $2, pageStart: $3, pageEnd: $4)"
-		],
-		"description": "Creates a pdf from the provided input."
-	},
-	"setBluetooth": {
-		"prefix": "Set Bluetooth",
-		"body": [
-			"setBluetooth(value: $0)"
-		],
-		"description": "Sets the devices bluetooth to the given boolean."
-	},
-	"deviceDetails": {
-		"prefix": "Get Device Details",
-		"body": [
-			"deviceDetails(detail: $0)"
-		],
-		"description": "Retrieves a detail about the device."
-	},
-	"searchPodcasts": {
-		"prefix": "Search Podcasts",
-		"body": [
-			"searchPodcasts(query: $0, by: $1, results: $2, country: $3, items: $4)"
-		],
-		"description": "Search Apple Podcasts based on the given search terms."
-	},
-	"getTextFrom": {
-		"prefix": "Get Text From Input",
-		"body": [
-			"getTextFrom(input: $0)"
-		],
-		"description": "Gets the text from the given input."
-	},
-	"scanQR": {
-		"prefix": "Scan QR Code",
-		"body": [
-			"scanQR()"
-		],
-		"description": "Scans a QR code and returns the output."
-	},
-	"correctSpelling": {
-		"prefix": "Correct Spelling",
-		"body": [
-			"correctSpelling(text: $0)"
-		],
-		"description": "Corrects the spelling of a word or sentence. Words can be placed in an array."
-	},
-	"exit": {
-		"prefix": "Exit Shortcut",
-		"body": [
-			"exit(var: $0)"
-		],
-		"description": "Exits the shortcut. This works like a return function basically. You can return a value if you place a variable in the parameters."
-	},
-	"airdrop": {
-		"prefix": "Airdrop",
-		"body": [
-			"airdrop(file: $0)"
-		],
-		"description": "Airdrops the input."
-	},
-	"searchAppStore": {
-		"prefix": "Search App Store",
-		"body": [
-			"searchAppStore(input: $0, by: $1, region: $2, device: $3, limit: $4)"
-		],
-		"description": "Searches the app store using the given parameters."
-	},
-	"decode": {
-		"prefix": "Decode Base64",
-		"body": [
-			"decode(input: $0)"
-		],
-		"description": "Decodes the given base64 input."
-	},
-	"valueFor": {
-		"prefix": "Get Value For Key",
-		"body": [
-			"valueFor(key: $0, dictionary: $1)"
-		],
-		"description": "Get's the value for a certain key in a dictionary."
-	},
-	"setVolume": {
-		"prefix": "Set Volume",
-		"body": [
-			"setVolume(level: $0)"
-		],
-		"description": "Sets the devices volume."
-	},
-	"skipForward": {
-		"prefix": "Skip Forward",
-		"body": [
-			"skipForward()"
-		],
-		"description": "Skips forward in the current media queue."
-	},
-	"filterPhotos": {
-		"prefix": "Filter Photos",
-		"body": [
-			"filterPhotos(filter: $0)"
-		],
-		"description": "Filters the given notes. Placing All Photos in the input will allow you to filter all of your photos."
-	},
-	"playSound": {
-		"prefix": "Play Sound",
-		"body": [
-			"playSound(file: $0)"
-		],
-		"description": "Play's the sound from the given input."
-	},
-	"deleteFile": {
-		"prefix": "Delete File",
-		"body": [
-			"deleteFile(input: $0, confirm: $1)"
-		],
-		"description": "Deletes the provided file."
-	},
-	"addToReadingList": {
-		"prefix": "Add to Reading List",
-		"body": [
-			"addToReadingList(urls: $0)"
-		],
-		"description": "Adds a URL to your reading list."
-	},
-	"setAppearance": {
-		"prefix": "Set Device Appearance",
-		"body": [
-			"setAppearance(mode: $0)"
-		],
-		"description": "Sets the devices appearance to the given style."
-	},
-	"reminderDetail": {
-		"prefix": "Get Reminder Detail",
-		"body": [
-			"reminderDetail(detail: $0, reminder: $1)"
-		],
-		"description": "Gets a detail about the given reminder."
-	},
-	"getEmailFrom": {
-		"prefix": "Get Email From Input",
-		"body": [
-			"getEmailFrom(input: $0)"
-		],
-		"description": "Gets emails from the given input."
-	},
-	"getFrames": {
-		"prefix": "Get Frames",
-		"body": [
-			"getFrames(image: $0)"
-		],
-		"description": "Get's all the frames from the given media."
-	},
-	"eventDetail": {
-		"prefix": "Get Event Detail",
-		"body": [
-			"eventDetail(detail: $0, event: $1)"
-		],
-		"description": "Gets a detail about the given event."
-	},
-	"showWebPage": {
-		"prefix": "Show Webpage",
-		"body": [
-			"showWebPage(url: $0, reader: $1)"
-		],
-		"description": "Shows a webpage at the given URLS."
-	},
-	"encodeAudio": {
-		"prefix": "Encode Audio",
-		"body": [
-			"encodeAudio(media: $0, format: $1, speed: $2, customSpeed: $3, title: $4, artist: $5, album: $6, genre: $7, year: $8, artwork: $9)"
-		],
-		"description": "Encodes the given audio."
-	},
-	"getLastScreenshot": {
-		"prefix": "Get Last Screenshots",
-		"body": [
-			"getLastScreenshot(count: $0)"
-		],
-		"description": "Retrieves the last n screenshots you took."
-	},
-	"toggleFlashlight": {
-		"prefix": "Toggle Flashlight",
-		"body": [
-			"toggleFlashlight()"
-		],
-		"description": "Toggles the flashlight."
-	},
-	"getFileOfType": {
-		"prefix": "Get File Of Type",
-		"body": [
-			"getFileOfType(input: $0, type: $1)"
-		],
-		"description": "Retrieves a file of the provided type from the given input.."
-	},
-	"filterAttendees": {
-		"prefix": "Filter Attendees",
-		"body": [
-			"filterAttendees(filter: $0)"
-		],
-		"description": "Filters the given Attendees. Attendees are people attending an event."
-	},
-	"call": {
-		"prefix": "Call",
-		"body": [
-			"call(contact: $0)"
-		],
-		"description": "Calls the given contact."
-	},
-	"markup": {
-		"prefix": "Markup",
-		"body": [
-			"markup(input: $0)"
-		],
-		"description": "Prepends contents to the file."
-	},
-	"dictateText": {
-		"prefix": "Dictate Text",
-		"body": [
-			"dictateText(language: $0, endTrigger: $1)"
-		],
-		"description": "Creates text from a dictation."
-	},
-	"sendMessage": {
-		"prefix": "Send Message",
-		"body": [
-			"sendMessage(message: $0, recipient: $1, show: $2)"
-		],
-		"description": "Sends a message to a recipient."
-	},
-	"getLastLivePhoto": {
-		"prefix": "Get Last Live Photos",
-		"body": [
-			"getLastLivePhoto(count: $0)"
-		],
-		"description": "Retrieves the last n live photos you took."
-	},
-	"showResult": {
-		"prefix": "Show Result",
-		"body": [
-			"showResult(text: $0)"
-		],
-		"description": "Shows the given result."
-	},
-	"siriDonation": {
-		"prefix": "Siri Donation",
-		"body": [
-			"siriDonation()"
-		],
-		"description": "This is just a blank action that does not do anything."
-	},
-	"takePhoto": {
-		"prefix": "Take Photo",
-		"body": [
-			"takePhoto(camera: $0, preview: $1, count: $2)"
-		],
-		"description": "Takes a photo."
-	},
-	"speakText": {
-		"prefix": "Speak Text",
-		"body": [
-			"speakText(text: $0, wait: $1, rate: $2, pitch: $3, language: $4)"
-		],
-		"description": "Speaks the given text."
-	},
-	"skipBack": {
-		"prefix": "Skip Backward",
-		"body": [
-			"skipBack(point: $0)"
-		],
-		"description": "Skips backwards in the current media queue."
-	},
-	"continueInShortcuts": {
-		"prefix": "Continue In Shortcuts",
-		"body": [
-			"continueInShortcuts()"
-		],
-		"description": "Makes the shortcut continue in the Shortcuts app."
-	},
-	"logWorkout": {
-		"prefix": "Log Workout",
-		"body": [
-			"logWorkout(type: $0, date: $1, duration: $2, calories: $3, distance: $4)"
-		],
-		"description": "Logs a workout to the health app."
-	},
-	"richTextFromHTML": {
-		"prefix": "Make Rich Text From HTML",
-		"body": [
-			"richTextFromHTML(html: $0)"
-		],
-		"description": "Creates Rich Text from provided HTML."
-	},
-	"musicDetail": {
-		"prefix": "Get Music Detail",
-		"body": [
-			"musicDetail(detail: $0, music: $1)"
-		],
-		"description": "Gets a detail about the given song."
-	},
-	"deletePhotos": {
-		"prefix": "Delete Photos",
-		"body": [
-			"deletePhotos(photos: $0)"
-		],
-		"description": "Deletes the given photos."
-	},
-	"noteDetail": {
-		"prefix": "Get Note Details",
-		"body": [
-			"noteDetail(property: $0, note: $1)"
-		],
-		"description": "Gets a detail about the note."
-	},
-	"fileDetail": {
-		"prefix": "Get File Details",
-		"body": [
-			"fileDetail(input: $0, property: $1)"
-		],
-		"description": "Retrieves a detail about a file."
-	},
-	"handoffPlayback": {
-		"prefix": "Handoff Playback",
-		"body": [
-			"handoffPlayback(source: $0, route: $1)"
-		],
-		"description": "Hands off Current Audio."
-	},
-	"conditionDetail": {
-		"prefix": "Get Condition Details",
-		"body": [
-			"conditionDetail(detail: $0, condition: $1)"
-		],
-		"description": "Gets a detail about the given condition."
-	},
-	"getDictionaryFrom": {
-		"prefix": "Get Dictionary From Input",
-		"body": [
-			"getDictionaryFrom(input: $0)"
-		],
-		"description": "Gets a dictionary from the given input."
-	},
-	"filterArticles": {
-		"prefix": "Filter Articles",
-		"body": [
-			"filterArticles(filter: $0)"
-		],
-		"description": "Filters the given articles."
-	},
-	"saveFile": {
-		"prefix": "Save File",
-		"body": [
-			"saveFile(input: $0, ask: $1, path: $2, overwrite: $3)"
-		],
-		"description": "Saves a file to a certain path. Can also show a save prompt if ask is true."
-	},
-	"runSSH": {
-		"prefix": "Run Script Over SSH",
-		"body": [
-			"runSSH(host: $0, port: $1, user: $2, auth: $3, password: $4, input: $5, script: $6)"
-		],
-		"description": "Runs the given script over an SSH connection."
-	},
-	"getPageRSS": {
-		"prefix": "Get RSS From Page",
-		"body": [
-			"getPageRSS(url: $0)"
-		],
-		"description": "Retrieves RSS feeds from page."
-	},
-	"subscribeToPodcast": {
-		"prefix": "Subscribe to Podcast",
-		"body": [
-			"subscribeToPodcast(feedURL: $0)"
-		],
-		"description": "Subscribes to the Podcast at the given feed url in Apple Podcasts."
-	},
-	"splitText": {
-		"prefix": "Split Text",
-		"body": [
-			"splitText(text: $0, separator: $1, customSeparator: $2)"
-		],
-		"description": "Splits the text by a separator. If the separator is set to Custom you can add a customSeparator to split by any character you want."
-	},
-	"showInStore": {
-		"prefix": "Show in Store",
-		"body": [
-			"showInStore(product: $0)"
-		],
-		"description": "Shows the provided product in the store."
-	},
-	"contactDetail": {
-		"prefix": "Get Contact Detail",
-		"body": [
-			"contactDetail(detail: $0, contact: $1)"
-		],
-		"description": "Gets a detail about the given contact."
-	},
-	"seek": {
-		"prefix": "Seek Media",
-		"body": [
-			"seek(behavior: $0, time: $1)"
-		],
-		"description": "Seeks in the current media."
-	},
-	"flipImage": {
-		"prefix": "Flip Image",
-		"body": [
-			"flipImage(image: $0, mode: $1)"
-		],
-		"description": "Flips an image."
-	},
-	"cropImage": {
-		"prefix": "Crop Image",
-		"body": [
-			"cropImage(image: $0, position: $1, height: $2, width: $3, x: $4, y: $5)"
-		],
-		"description": "Crops an Image to the specified parameters."
-	},
-	"takeScreenshot": {
-		"prefix": "Take a Screenshot",
-		"body": [
-			"takeScreenshot()"
-		],
-		"description": "Takes a screenshot of the devices current screen."
 	},
 	"alert": {
 		"prefix": "Send Alert",
@@ -1574,40 +20,96 @@
 		],
 		"description": "Shows the user an alert."
 	},
-	"appendNote": {
-		"prefix": "Append Note",
+	"getClass": {
+		"prefix": "Get Object of Class",
 		"body": [
-			"appendNote(text: $0, note: $1)"
+			"getClass(input: $0, class: $1)"
 		],
-		"description": "Appends text to the end of a note."
+		"description": "Gets an object with the defined class."
 	},
-	"getLastBurst": {
-		"prefix": "Get Last Bursts",
+	"decodeURL": {
+		"prefix": "Decode URL",
 		"body": [
-			"getLastBurst(count: $0)"
+			"decodeURL(url: $0)"
 		],
-		"description": "Retrieves the last n bursts you took."
+		"description": "Converts URL encoded text to normal characters."
 	},
-	"stockQuote": {
-		"prefix": "Stock Quote",
+	"share": {
+		"prefix": "Share",
 		"body": [
-			"stockQuote(symbol: $0)"
+			"share(file: $0)"
 		],
-		"description": "Gets a quote for the provided stock symbol."
+		"description": "Shares the input."
 	},
-	"openIn": {
-		"prefix": "Open In",
+	"deleteFile": {
+		"prefix": "Delete File",
 		"body": [
-			"openIn(input: $0, app: $1, ask: $2)"
+			"deleteFile(input: $0, confirm: $1)"
 		],
-		"description": "Opens input in a certain ask."
+		"description": "Deletes the provided file."
 	},
-	"getPodcastEpisodes": {
-		"prefix": "Get Podcast Episodes",
+	"filterFiles": {
+		"prefix": "Filter File",
 		"body": [
-			"getPodcastEpisodes(input: $0)"
+			"filterFiles(filter: $0)"
 		],
-		"description": "Retreives the episodes from a podcast."
+		"description": "Filters the given files."
+	},
+	"getContactsFrom": {
+		"prefix": "Get Contacts From Input",
+		"body": [
+			"getContactsFrom(input: $0)"
+		],
+		"description": "Gets contacts from the given input."
+	},
+	"filterLocations": {
+		"prefix": "Filter Locations",
+		"body": [
+			"filterLocations(filter: $0)"
+		],
+		"description": "Filters the given locations."
+	},
+	"getEmailFrom": {
+		"prefix": "Get Email From Input",
+		"body": [
+			"getEmailFrom(input: $0)"
+		],
+		"description": "Gets emails from the given input."
+	},
+	"encodeAudio": {
+		"prefix": "Encode Audio",
+		"body": [
+			"encodeAudio(media: $0, format: $1, speed: $2, customSpeed: $3, title: $4, artist: $5, album: $6, genre: $7, year: $8, artwork: $9)"
+		],
+		"description": "Encodes the given audio."
+	},
+	"number": {
+		"prefix": "Number",
+		"body": [
+			"number(value: $0)"
+		],
+		"description": "Declares a number."
+	},
+	"valuesFrom": {
+		"prefix": "Get All Values from Dictionary",
+		"body": [
+			"valuesFrom(dictionary: $0)"
+		],
+		"description": "Get all of the values from a dictionary."
+	},
+	"call": {
+		"prefix": "Call",
+		"body": [
+			"call(contact: $0)"
+		],
+		"description": "Calls the given contact."
+	},
+	"text": {
+		"prefix": "Text",
+		"body": [
+			"text(text: $0)"
+		],
+		"description": "Declares text. Basically just a string."
 	},
 	"replaceText": {
 		"prefix": "Replace Text",
@@ -1616,82 +118,47 @@
 		],
 		"description": "Replaces text based on the parameters."
 	},
-	"getUpcomingReminders": {
-		"prefix": "Get Upcoming Reminders",
+	"createFolder": {
+		"prefix": "Create Folder",
 		"body": [
-			"getUpcomingReminders(count: $0, list: $1)"
+			"createFolder(path: $0)"
 		],
-		"description": "Retrieves the upcoming reminders from the given list. All Lists will get reminders from all lists."
+		"description": "Create folder at a path."
 	},
-	"stockDetail": {
-		"prefix": "Get Stock Detail",
+	"translateText": {
+		"prefix": "Translate Text",
 		"body": [
-			"stockDetail(detail: $0, stock: $1)"
+			"translateText(text: $0, from: $1, to: $2)"
 		],
-		"description": "Gets a detail about the given stock."
+		"description": "Translates the given text from one language to another."
 	},
-	"selectSong": {
-		"prefix": "Select Song From Apple Music",
+	"setWiFi": {
+		"prefix": "Set WiFi",
 		"body": [
-			"selectSong(multiple: $0)"
+			"setWiFi(state: $0)"
 		],
-		"description": "Allows you to select a song from Apple Music."
+		"description": "Sets the state of the devices WiFi connection."
 	},
-	"getForecast": {
-		"prefix": "Get Forecast",
+	"encodeMedia": {
+		"prefix": "Encode Media",
 		"body": [
-			"getForecast(type: $0)"
+			"encodeMedia(media: $0, size: $1, speed: $2, customSpeed: $3, title: $4, artist: $5, album: $6, genre: $7, year: $8, artwork: $9)"
 		],
-		"description": "Retrieves the forecast in your local area."
+		"description": "Encodes the given media into a video."
 	},
-	"adjustDate": {
-		"prefix": "Adjust Date",
+	"musicDetail": {
+		"prefix": "Get Music Detail",
 		"body": [
-			"adjustDate(operation: $0, duration: $1, date: $2)"
+			"musicDetail(detail: $0, music: $1)"
 		],
-		"description": "Adjusts the given date by adding or subtracting the given duration. If you use any get operation you do not need a duration."
+		"description": "Gets a detail about the given song."
 	},
-	"filterImages": {
-		"prefix": "Filter Images",
+	"getCurrentConditions": {
+		"prefix": "Get Current Conditions",
 		"body": [
-			"filterImages(filter: $0)"
+			"getCurrentConditions()"
 		],
-		"description": "Filters the given images."
-	},
-	"openURL": {
-		"prefix": "Open URL",
-		"body": [
-			"openURL(url: $0)"
-		],
-		"description": "Opens the given URL."
-	},
-	"print": {
-		"prefix": "Print",
-		"body": [
-			"print(input: $0)"
-		],
-		"description": "Prints the input."
-	},
-	"combineText": {
-		"prefix": "Combine Text",
-		"body": [
-			"combineText(text: $0, combine: $1, separator: $2)"
-		],
-		"description": "Combines the given text. Text can be given in an array."
-	},
-	"prependFile": {
-		"prefix": "Prepend File",
-		"body": [
-			"prependFile(input: $0, path: $1, newLine: $2)"
-		],
-		"description": "Prepends contents to the file."
-	},
-	"setAirplaneMode": {
-		"prefix": "Set Airplane Mode",
-		"body": [
-			"setAirplaneMode(state: $0)"
-		],
-		"description": "Sets the devices airplane mode."
+		"description": "Gets the current weather conditions."
 	},
 	"startWorkout": {
 		"prefix": "Start Workout",
@@ -1700,26 +167,537 @@
 		],
 		"description": "Starts a workout. The value parameter is the amount of whatever unit you place. For example 200 cal, 10 min, or 1 hr"
 	},
-	"filterReminders": {
-		"prefix": "Filter Reminders",
+	"showWebPage": {
+		"prefix": "Show Webpage",
 		"body": [
-			"filterReminders(filter: $0)"
+			"showWebPage(url: $0, reader: $1)"
 		],
-		"description": "Filters the given reminders. Placing All Reminders in the input will allow you to filter all of your reminders."
+		"description": "Shows a webpage at the given URLS."
 	},
-	"saveToCameraRoll": {
-		"prefix": "Save to Camera Roll",
+	"setName": {
+		"prefix": "Set Name",
 		"body": [
-			"saveToCameraRoll(image: $0, album: $1)"
+			"setName(input: $0, name: $1, includeExtension: $2)"
 		],
-		"description": "Saves the given image to the camera roll."
+		"description": "Sets the name of an item."
 	},
-	"getMatchGroup": {
-		"prefix": "Get Match Group",
+	"getPhonesFrom": {
+		"prefix": "Get Phone Numbers From Input",
 		"body": [
-			"getMatchGroup(type: $0, matches: $1, index: $2)"
+			"getPhonesFrom(input: $0)"
 		],
-		"description": "Gets the a certain group in a regex match."
+		"description": "Gets phone numbers from the given input."
+	},
+	"htmlFromRichText": {
+		"prefix": "Make HTML From Rich Text",
+		"body": [
+			"htmlFromRichText(text: $0, fullDocument: $1)"
+		],
+		"description": "Creates an HTML document from the provided Rich Text."
+	},
+	"math": {
+		"prefix": "Math",
+		"body": [
+			"math(input: $0, operation: $1, operand: $2, scientific: $3)"
+		],
+		"description": "Solves a math equation. You can use +, -, ×, ÷, and … as operations. When using … you can apply a scientific operation type."
+	},
+	"waitToReturn": {
+		"prefix": "Wait to return",
+		"body": [
+			"waitToReturn()"
+		],
+		"description": "Waits for you to return back to the app to continue execution."
+	},
+	"debugShortcut": {
+		"prefix": "Debug Content Attribution",
+		"body": [
+			"debugShortcut()"
+		],
+		"description": "A weird debug action."
+	},
+	"getLastScreenshot": {
+		"prefix": "Get Last Screenshots",
+		"body": [
+			"getLastScreenshot(count: $0)"
+		],
+		"description": "Retrieves the last n screenshots you took."
+	},
+	"filterMusic": {
+		"prefix": "Filter Music",
+		"body": [
+			"filterMusic(filter: $0)"
+		],
+		"description": "Filters the given music. Placing All Music in the input will allow you to filter all of your music."
+	},
+	"setCellular": {
+		"prefix": "Set Cellular",
+		"body": [
+			"setCellular(state: $0)"
+		],
+		"description": "Sets the state of the devices cellular connection."
+	},
+	"getHeaders": {
+		"prefix": "Get URL Headers",
+		"body": [
+			"getHeaders(url: $0)"
+		],
+		"description": "Retrieves the headers at a certain URL."
+	},
+	"eventDetail": {
+		"prefix": "Get Event Detail",
+		"body": [
+			"eventDetail(detail: $0, event: $1)"
+		],
+		"description": "Gets a detail about the given event."
+	},
+	"clearUpNext": {
+		"prefix": "Clear Up Next",
+		"body": [
+			"clearUpNext()"
+		],
+		"description": "Clears the up next queue."
+	},
+	"subscribeToPodcast": {
+		"prefix": "Subscribe to Podcast",
+		"body": [
+			"subscribeToPodcast(feedURL: $0)"
+		],
+		"description": "Subscribes to the Podcast at the given feed url in Apple Podcasts."
+	},
+	"toggleAppearance": {
+		"prefix": "Toggle Device Appearance",
+		"body": [
+			"toggleAppearance()"
+		],
+		"description": "Toggles the devices appearance"
+	},
+	"getFile": {
+		"prefix": "Get File",
+		"body": [
+			"getFile(picker: $0, path: $1, error: $2, multiple: $3)"
+		],
+		"description": "Retrieves the file at a given path. It can also open a document picker if there is no path provided and the picker parameter is set to true."
+	},
+	"podcastEpisodeDetail": {
+		"prefix": "Get Podcast Episode Detail",
+		"body": [
+			"podcastEpisodeDetail(detail: $0, episode: $1)"
+		],
+		"description": "Gets a detail about the given Podcast episode. Checkout ATP btw it's a super good show."
+	},
+	"deviceDetails": {
+		"prefix": "Get Device Details",
+		"body": [
+			"deviceDetails(detail: $0)"
+		],
+		"description": "Retrieves a detail about the device."
+	},
+	"skipBack": {
+		"prefix": "Skip Backward",
+		"body": [
+			"skipBack(point: $0)"
+		],
+		"description": "Skips backwards in the current media queue."
+	},
+	"selectSong": {
+		"prefix": "Select Song From Apple Music",
+		"body": [
+			"selectSong(multiple: $0)"
+		],
+		"description": "Allows you to select a song from Apple Music."
+	},
+	"sampleDetail": {
+		"prefix": "Get Health Sample Detail",
+		"body": [
+			"sampleDetail(detail: $0, sample: $1)"
+		],
+		"description": "Gets a detail about the given health sample."
+	},
+	"extractArchive": {
+		"prefix": "Extract Archive",
+		"body": [
+			"extractArchive(input: $0)"
+		],
+		"description": "Extracts the given archive."
+	},
+	"productDetail": {
+		"prefix": "Get Product Detail",
+		"body": [
+			"productDetail(detail: $0, product: $1)"
+		],
+		"description": "Gets a detail about the given product."
+	},
+	"getForecast": {
+		"prefix": "Get Forecast",
+		"body": [
+			"getForecast(type: $0)"
+		],
+		"description": "Retrieves the forecast in your local area."
+	},
+	"addToPlaylist": {
+		"prefix": "Add to Playlist",
+		"body": [
+			"addToPlaylist(music: $0, playlist: $1)"
+		],
+		"description": "Adds the provided music to the provided playlist."
+	},
+	"handoffPlayback": {
+		"prefix": "Handoff Playback",
+		"body": [
+			"handoffPlayback(source: $0, route: $1)"
+		],
+		"description": "Hands off Current Audio."
+	},
+	"askForInput": {
+		"prefix": "Ask for Input",
+		"body": [
+			"askForInput(prompt: $0, type: $1, default: $2)"
+		],
+		"description": "Asks the user for input input."
+	},
+	"airdrop": {
+		"prefix": "Airdrop",
+		"body": [
+			"airdrop(file: $0)"
+		],
+		"description": "Airdrops the input."
+	},
+	"takePhoto": {
+		"prefix": "Take Photo",
+		"body": [
+			"takePhoto(camera: $0, preview: $1, count: $2)"
+		],
+		"description": "Takes a photo."
+	},
+	"maskImage": {
+		"prefix": "Mask Image",
+		"body": [
+			"maskImage(image: $0, mode: $1, mask: $2)"
+		],
+		"description": "Masks an image."
+	},
+	"trimVideo": {
+		"prefix": "Trim Video",
+		"body": [
+			"trimVideo(video: $0)"
+		],
+		"description": "Trims a video."
+	},
+	"imageDetail": {
+		"prefix": "Get Image Detail",
+		"body": [
+			"imageDetail(detail: $0, image: $1)"
+		],
+		"description": "Gets a detail about the given image."
+	},
+	"formatDate": {
+		"prefix": "Format Date",
+		"body": [
+			"formatDate(date: $0, dStyle: $1, tStyle: $2, custom: $3, isoTime: $4)"
+		],
+		"description": "Formats the given date."
+	},
+	"getFrames": {
+		"prefix": "Get Frames",
+		"body": [
+			"getFrames(image: $0)"
+		],
+		"description": "Get's all the frames from the given media."
+	},
+	"openIn": {
+		"prefix": "Open In",
+		"body": [
+			"openIn(input: $0, app: $1, ask: $2)"
+		],
+		"description": "Opens input in a certain ask."
+	},
+	"getTextFrom": {
+		"prefix": "Get Text From Input",
+		"body": [
+			"getTextFrom(input: $0)"
+		],
+		"description": "Gets the text from the given input."
+	},
+	"getRSSItems": {
+		"prefix": "Get RSS Items From Feed",
+		"body": [
+			"getRSSItems(url: $0, count: $1)"
+		],
+		"description": "Gets the RSS items from an RSS Feed."
+	},
+	"saveFile": {
+		"prefix": "Save File",
+		"body": [
+			"saveFile(input: $0, ask: $1, path: $2, overwrite: $3)"
+		],
+		"description": "Saves a file to a certain path. Can also show a save prompt if ask is true."
+	},
+	"noteDetail": {
+		"prefix": "Get Note Details",
+		"body": [
+			"noteDetail(property: $0, note: $1)"
+		],
+		"description": "Gets a detail about the note."
+	},
+	"getURLSFromInput": {
+		"prefix": "Get URLS From Input",
+		"body": [
+			"getURLSFromInput(text: $0)"
+		],
+		"description": "Retrieves URLS from the input."
+	},
+	"searchAppStore": {
+		"prefix": "Search App Store",
+		"body": [
+			"searchAppStore(input: $0, by: $1, region: $2, device: $3, limit: $4)"
+		],
+		"description": "Searches the app store using the given parameters."
+	},
+	"getPlaylist": {
+		"prefix": "Get Playlist",
+		"body": [
+			"getPlaylist(name: $0)"
+		],
+		"description": "Retrieves a playlist."
+	},
+	"shazamDetail": {
+		"prefix": "Get Shazam Detail",
+		"body": [
+			"shazamDetail(detail: $0, shazam: $1)"
+		],
+		"description": "Gets a detail about the given Shazam."
+	},
+	"getShortcuts": {
+		"prefix": "Get Shortcuts",
+		"body": [
+			"getShortcuts()"
+		],
+		"description": "Retrieves a list of all of your shortcuts."
+	},
+	"facetime": {
+		"prefix": "Facetime",
+		"body": [
+			"facetime(type: $0, contact: $1)"
+		],
+		"description": "Facetimes the given contact."
+	},
+	"toggleFlashlight": {
+		"prefix": "Toggle Flashlight",
+		"body": [
+			"toggleFlashlight()"
+		],
+		"description": "Toggles the flashlight."
+	},
+	"userActivity": {
+		"prefix": "User Activity",
+		"body": [
+			"userActivity()"
+		],
+		"description": "This is just a blank action that does not do anything."
+	},
+	"getPageRSS": {
+		"prefix": "Get RSS From Page",
+		"body": [
+			"getPageRSS(url: $0)"
+		],
+		"description": "Retrieves RSS feeds from page."
+	},
+	"combineText": {
+		"prefix": "Combine Text",
+		"body": [
+			"combineText(text: $0, combine: $1, separator: $2)"
+		],
+		"description": "Combines the given text. Text can be given in an array."
+	},
+	"overlayImage": {
+		"prefix": "Overlay Image",
+		"body": [
+			"overlayImage(image1: $0, image2: $1, editor: $2, height: $3, width: $4, position: $5, opacity: $6, rotation: $7)"
+		],
+		"description": "Overlays one image onto another image."
+	},
+	"getLastLivePhoto": {
+		"prefix": "Get Last Live Photos",
+		"body": [
+			"getLastLivePhoto(count: $0)"
+		],
+		"description": "Retrieves the last n live photos you took."
+	},
+	"filterCalendar": {
+		"prefix": "Filter Calendar Events",
+		"body": [
+			"filterCalendar(filter: $0)"
+		],
+		"description": "Filters the given events. Placing All Events in the input will allow you to filter all of your calendar events."
+	},
+	"openURL": {
+		"prefix": "Open URL",
+		"body": [
+			"openURL(url: $0)"
+		],
+		"description": "Opens the given URL."
+	},
+	"hash": {
+		"prefix": "Hash",
+		"body": [
+			"hash(input: $0, type: $1)"
+		],
+		"description": "Hashes the provided input."
+	},
+	"changeWallpaper": {
+		"prefix": "Change Wallpaper",
+		"body": [
+			"changeWallpaper(image: $0, location: $1, preview: $2)"
+		],
+		"description": "Changes the devices wallpaper."
+	},
+	"adjustDate": {
+		"prefix": "Adjust Date",
+		"body": [
+			"adjustDate(operation: $0, duration: $1, date: $2)"
+		],
+		"description": "Adjusts the given date by adding or subtracting the given duration. If you use any get operation you do not need a duration."
+	},
+	"setBrightness": {
+		"prefix": "Set Brightness",
+		"body": [
+			"setBrightness(value: $0)"
+		],
+		"description": "Sets the devices bluetooth to the given double."
+	},
+	"splitText": {
+		"prefix": "Split Text",
+		"body": [
+			"splitText(text: $0, separator: $1, customSeparator: $2)"
+		],
+		"description": "Splits the text by a separator. If the separator is set to Custom you can add a customSeparator to split by any character you want."
+	},
+	"runJavascriptOnWebpage": {
+		"prefix": "Run Javascript on Webpage",
+		"body": [
+			"runJavascriptOnWebpage(url: $0, javascript: $1)"
+		],
+		"description": "Runs the given javascript on a webpage."
+	},
+	"pageDetail": {
+		"prefix": "Get Page Detail",
+		"body": [
+			"pageDetail(detail: $0, webpage: $1)"
+		],
+		"description": "Gets a detail about the given Apple Pages Document."
+	},
+	"getTimeBetween": {
+		"prefix": "Get Time Between Dates",
+		"body": [
+			"getTimeBetween(first: $0, second: $1, interval: $2)"
+		],
+		"description": "Retrieves the time between the two dates."
+	},
+	"videoFromGif": {
+		"prefix": "Make Video from GIF",
+		"body": [
+			"videoFromGif(gif: $0, loop: $1)"
+		],
+		"description": "Creates a video from a GIF. It's pronounced GIF"
+	},
+	"speakText": {
+		"prefix": "Speak Text",
+		"body": [
+			"speakText(text: $0, wait: $1, rate: $2, pitch: $3, language: $4)"
+		],
+		"description": "Speaks the given text."
+	},
+	"setVoiceData": {
+		"prefix": "Set Voice Data",
+		"body": [
+			"setVoiceData(mode: $0, sim: $1)"
+		],
+		"description": "Set's the devices cellular data settings. Can be used to change the current sim, and cell mode (4G, LTE, 5G)."
+	},
+	"selectContact": {
+		"prefix": "Select Contact",
+		"body": [
+			"selectContact(multiple: $0)"
+		],
+		"description": "Allows you to select a contact."
+	},
+	"setAppearance": {
+		"prefix": "Set Device Appearance",
+		"body": [
+			"setAppearance(mode: $0)"
+		],
+		"description": "Sets the devices appearance to the given style."
+	},
+	"lowPowerMode": {
+		"prefix": "Set Low Power Mode",
+		"body": [
+			"lowPowerMode(state: $0)"
+		],
+		"description": "Sets the devices low power mode."
+	},
+	"list": {
+		"prefix": "List",
+		"body": [
+			"list(items: $0)"
+		],
+		"description": "Creates a list."
+	},
+	"resizeImage": {
+		"prefix": "Resize Image",
+		"body": [
+			"resizeImage(image: $0, height: $1, width: $2)"
+		],
+		"description": "Resizes an image to a certain height and width."
+	},
+	"getLastPhoto": {
+		"prefix": "Get Last Photo",
+		"body": [
+			"getLastPhoto(count: $0, screenshots: $1)"
+		],
+		"description": "Retrieves the last n photos in your library. You can optionally include screenshots or not."
+	},
+	"getUpcomingReminders": {
+		"prefix": "Get Upcoming Reminders",
+		"body": [
+			"getUpcomingReminders(count: $0, list: $1)"
+		],
+		"description": "Retrieves the upcoming reminders from the given list. All Lists will get reminders from all lists."
+	},
+	"getArticle": {
+		"prefix": "Get Article",
+		"body": [
+			"getArticle(url: $0)"
+		],
+		"description": "Retrieves an article using safari reader."
+	},
+	"makeGIF": {
+		"prefix": "Create GIF",
+		"body": [
+			"makeGIF(content: $0, frameTime: $1, loopOn: $2, loopCount: $3, autoSize: $4, width: $5, height: $6)"
+		],
+		"description": "Creates a GIF from the provided input."
+	},
+	"showInStore": {
+		"prefix": "Show in Store",
+		"body": [
+			"showInStore(product: $0)"
+		],
+		"description": "Shows the provided product in the store."
+	},
+	"detectLanguage": {
+		"prefix": "Detect Language",
+		"body": [
+			"detectLanguage(text: $0)"
+		],
+		"description": "Detects the language of the given text."
+	},
+	"downloadURL": {
+		"prefix": "Get Contents of URL",
+		"body": [
+			"downloadURL(url: $0, method: $1, headers: $2, requestType: $3, requestJSON: $4, requestVar: $5)"
+		],
+		"description": "Downloads the contents at the given URL. When making a form or JSON request, use the request JSON parameter. When using a file request type, use the request variable parameter."
 	},
 	"sendNotification": {
 		"prefix": "Send Notification",
@@ -1728,12 +706,635 @@
 		],
 		"description": "Sends the user a notifcation."
 	},
-	"choose": {
-		"prefix": "Choose From List",
+	"createQR": {
+		"prefix": "Create QR Code",
 		"body": [
-			"choose(list: $0, prompt: $1, multiple: $2, all: $3)"
+			"createQR(text: $0, correction: $1)"
 		],
-		"description": "Allows you to choose an item from the given list."
+		"description": "Creates a QR for the given text."
+	},
+	"getallalarms": {
+		"prefix": "Get All Alarms",
+		"body": [
+			"getallalarms(show: $0)"
+		],
+		"description": "Retrieves all of your alarms."
+	},
+	"showNote": {
+		"prefix": "Show Note",
+		"body": [
+			"showNote(note: $0)"
+		],
+		"description": "Shows the provided note."
+	},
+	"formatSize": {
+		"prefix": "Format Size",
+		"body": [
+			"formatSize(size: $0, format: $1, units: $2)"
+		],
+		"description": "Formats the size of a file."
+	},
+	"getDateFrom": {
+		"prefix": "Get Date From Input",
+		"body": [
+			"getDateFrom(input: $0)"
+		],
+		"description": "Gets the dates from the given input."
+	},
+	"grabJellycut": {
+		"prefix": "Grab Jellycut",
+		"body": [
+			"grabJellycut()"
+		],
+		"description": "Get's the plist from the latest exported Jellycut."
+	},
+	"stockDetail": {
+		"prefix": "Get Stock Detail",
+		"body": [
+			"stockDetail(detail: $0, stock: $1)"
+		],
+		"description": "Gets a detail about the given stock."
+	},
+	"getLastVideo": {
+		"prefix": "Get Last Video",
+		"body": [
+			"getLastVideo(count: $0)"
+		],
+		"description": "Retrieves the last n videos you recorded."
+	},
+	"playPodcast": {
+		"prefix": "Play Podcast",
+		"body": [
+			"playPodcast(podcast: $0)"
+		],
+		"description": "Subscribes to the Podcast at the given feed url in Apple Podcasts."
+	},
+	"convertImage": {
+		"prefix": "Convert Image",
+		"body": [
+			"convertImage(image: $0, format: $1, metadata: $2, quality: $3)"
+		],
+		"description": "Converts an image to a new format."
+	},
+	"print": {
+		"prefix": "Print",
+		"body": [
+			"print(input: $0)"
+		],
+		"description": "Prints the input."
+	},
+	"searchPodcasts": {
+		"prefix": "Search Podcasts",
+		"body": [
+			"searchPodcasts(query: $0, by: $1, results: $2, country: $3, items: $4)"
+		],
+		"description": "Search Apple Podcasts based on the given search terms."
+	},
+	"runShortcut": {
+		"prefix": "Run Shortcut",
+		"body": [
+			"runShortcut(name: $0, input: $1, show: $2)"
+		],
+		"description": "Runs the given shortcut."
+	},
+	"appendNote": {
+		"prefix": "Append Note",
+		"body": [
+			"appendNote(text: $0, note: $1)"
+		],
+		"description": "Appends text to the end of a note."
+	},
+	"calculate": {
+		"prefix": "Calculate Expression",
+		"body": [
+			"calculate(input: $0)"
+		],
+		"description": "Calculates an expression"
+	},
+	"getAddressFrom": {
+		"prefix": "Get Address From Input",
+		"body": [
+			"getAddressFrom(input: $0)"
+		],
+		"description": "Gets addresses from the given input."
+	},
+	"filterAttendees": {
+		"prefix": "Filter Attendees",
+		"body": [
+			"filterAttendees(filter: $0)"
+		],
+		"description": "Filters the given Attendees. Attendees are people attending an event."
+	},
+	"siriDonation": {
+		"prefix": "Siri Donation",
+		"body": [
+			"siriDonation()"
+		],
+		"description": "This is just a blank action that does not do anything."
+	},
+	"rotateImage": {
+		"prefix": "Rotate Image",
+		"body": [
+			"rotateImage(image: $0, degrees: $1)"
+		],
+		"description": "Rotates an image a certain degree."
+	},
+	"wifiDetails": {
+		"prefix": "Get Wi-Fi Details",
+		"body": [
+			"wifiDetails(detail: $0)"
+		],
+		"description": "Gets a detail about the devices WiFi."
+	},
+	"flipImage": {
+		"prefix": "Flip Image",
+		"body": [
+			"flipImage(image: $0, mode: $1)"
+		],
+		"description": "Flips an image."
+	},
+	"encodeURL": {
+		"prefix": "Encode URL",
+		"body": [
+			"encodeURL(url: $0)"
+		],
+		"description": "Encodes the given text in URL allowed characters."
+	},
+	"keysFrom": {
+		"prefix": "Get All Keys from Dictionary",
+		"body": [
+			"keysFrom(dictionary: $0)"
+		],
+		"description": "Get all of the keys from a dictionary."
+	},
+	"selectPhoto": {
+		"prefix": "Select Photo",
+		"body": [
+			"selectPhoto(types: $0, multiple: $1)"
+		],
+		"description": "Allows you to select a photo."
+	},
+	"makeArchive": {
+		"prefix": "Make Archive",
+		"body": [
+			"makeArchive(input: $0, type: $1)"
+		],
+		"description": "Makes an archive of the given file."
+	},
+	"removeReminders": {
+		"prefix": "Remove Reminders",
+		"body": [
+			"removeReminders(reminders: $0)"
+		],
+		"description": "Removes the given reminders."
+	},
+	"dictateText": {
+		"prefix": "Dictate Text",
+		"body": [
+			"dictateText(language: $0, endTrigger: $1)"
+		],
+		"description": "Creates text from a dictation."
+	},
+	"getNumbersFrom": {
+		"prefix": "Get Numbers From Input",
+		"body": [
+			"getNumbersFrom(text: $0)"
+		],
+		"description": "Detects the numbers in the given input."
+	},
+	"contentGraph": {
+		"prefix": "View Content Graph",
+		"body": [
+			"contentGraph(input: $0)"
+		],
+		"description": "Displays a content graph of variable."
+	},
+	"dictionary": {
+		"prefix": "Dictionary",
+		"body": [
+			"dictionary(json: $0)"
+		],
+		"description": "Creates a dictionary based on the given JSON. JSON can be replaced with a dictionary from the dictionary builder."
+	},
+	"cellularDetails": {
+		"prefix": "Get Cellular Details",
+		"body": [
+			"cellularDetails(detail: $0)"
+		],
+		"description": "Gets a detail about the devices Cellular Connection."
+	},
+	"timer": {
+		"prefix": "Start Timer",
+		"body": [
+			"timer(duration: $0)"
+		],
+		"description": "Starts a timer for the given time."
+	},
+	"getClipboard": {
+		"prefix": "Get Clipboard",
+		"body": [
+			"getClipboard()"
+		],
+		"description": "Get's the devices clipboard."
+	},
+	"filterNotes": {
+		"prefix": "Filter Notes",
+		"body": [
+			"filterNotes(filter: $0)"
+		],
+		"description": "Filters the given notes. Placing All Notes in the input will allow you to filter all of your notes."
+	},
+	"exit": {
+		"prefix": "Exit Shortcut",
+		"body": [
+			"exit(var: $0)"
+		],
+		"description": "Exits the shortcut. This works like a return function basically. You can return a value if you place a variable in the parameters."
+	},
+	"importShortcut": {
+		"prefix": "Import Shortcut",
+		"body": [
+			"importShortcut(file: $0)"
+		],
+		"description": "Import a shortcut into Jellycuts. Action for Jellycuts."
+	},
+	"setVolume": {
+		"prefix": "Set Volume",
+		"body": [
+			"setVolume(level: $0)"
+		],
+		"description": "Sets the devices volume."
+	},
+	"playSound": {
+		"prefix": "Play Sound",
+		"body": [
+			"playSound(file: $0)"
+		],
+		"description": "Play's the sound from the given input."
+	},
+	"logWorkout": {
+		"prefix": "Log Workout",
+		"body": [
+			"logWorkout(type: $0, date: $1, duration: $2, calories: $3, distance: $4)"
+		],
+		"description": "Logs a workout to the health app."
+	},
+	"decode": {
+		"prefix": "Decode Base64",
+		"body": [
+			"decode(input: $0)"
+		],
+		"description": "Decodes the given base64 input."
+	},
+	"getFileLink": {
+		"prefix": "Get File Link",
+		"body": [
+			"getFileLink(file: $0)"
+		],
+		"description": "Gets the iCloud link to a certain file."
+	},
+	"locationDetail": {
+		"prefix": "Get Location Detail",
+		"body": [
+			"locationDetail(detail: $0, location: $1)"
+		],
+		"description": "Gets a detail about the given location."
+	},
+	"contactDetail": {
+		"prefix": "Get Contact Detail",
+		"body": [
+			"contactDetail(detail: $0, contact: $1)"
+		],
+		"description": "Gets a detail about the given contact."
+	},
+	"showDefinition": {
+		"prefix": "Show Definition",
+		"body": [
+			"showDefinition(text: $0)"
+		],
+		"description": "Gets the definition of a word."
+	},
+	"filterImages": {
+		"prefix": "Filter Images",
+		"body": [
+			"filterImages(filter: $0)"
+		],
+		"description": "Filters the given images."
+	},
+	"addToReadingList": {
+		"prefix": "Add to Reading List",
+		"body": [
+			"addToReadingList(urls: $0)"
+		],
+		"description": "Adds a URL to your reading list."
+	},
+	"setOrientationLock": {
+		"prefix": "Set Orientation Lock",
+		"body": [
+			"setOrientationLock(state: $0)"
+		],
+		"description": "Sets the state of the devices Orientation Lock."
+	},
+	"showResult": {
+		"prefix": "Show Result",
+		"body": [
+			"showResult(text: $0)"
+		],
+		"description": "Shows the given result."
+	},
+	"richTextFromHTML": {
+		"prefix": "Make Rich Text From HTML",
+		"body": [
+			"richTextFromHTML(html: $0)"
+		],
+		"description": "Creates Rich Text from provided HTML."
+	},
+	"nothing": {
+		"prefix": "Nothing",
+		"body": [
+			"nothing()"
+		],
+		"description": "Does nothing."
+	},
+	"urlContents": {
+		"prefix": "Contents Of URL",
+		"body": [
+			"urlContents(url: $0)"
+		],
+		"description": "Retrieves the contents of a url. Returns a webpage."
+	},
+	"toggleOrientationLock": {
+		"prefix": "Toggle Orientation Lock",
+		"body": [
+			"toggleOrientationLock()"
+		],
+		"description": "Toggles the state of the devices Orientation Lock."
+	},
+	"showInCalendar": {
+		"prefix": "Show in Calendar",
+		"body": [
+			"showInCalendar(event: $0)"
+		],
+		"description": "Shows the provided event on the calendar."
+	},
+	"searchWeb": {
+		"prefix": "Search Web",
+		"body": [
+			"searchWeb(text: $0, destination: $1)"
+		],
+		"description": "Searches the desired browser ."
+	},
+	"matchText": {
+		"prefix": "Match Text",
+		"body": [
+			"matchText(text: $0, regex: $1, caseSensitive: $2)"
+		],
+		"description": "Matches text in the input based on regex."
+	},
+	"setClipboard": {
+		"prefix": "Set Clipboard",
+		"body": [
+			"setClipboard(variable: $0, local: $1, expiration: $2)"
+		],
+		"description": "Sets the devices clipboard to the input."
+	},
+	"getLocation": {
+		"prefix": "Get Location",
+		"body": [
+			"getLocation(input: $0)"
+		],
+		"description": "Gets the devices current location."
+	},
+	"getItemFromList": {
+		"prefix": "Get Item From List",
+		"body": [
+			"getItemFromList(list: $0, type: $1, index: $2, startIndex: $3, endIndex: $4)"
+		],
+		"description": "Gets an item from the given list. If you choose to get items in range you can use the startIndex and endIndex to define the range, you do not need to give it an index."
+	},
+	"fileDetail": {
+		"prefix": "Get File Details",
+		"body": [
+			"fileDetail(input: $0, property: $1)"
+		],
+		"description": "Retrieves a detail about a file."
+	},
+	"quicklook": {
+		"prefix": "Quicklook",
+		"body": [
+			"quicklook(input: $0)"
+		],
+		"description": "Quicklooks the provided input."
+	},
+	"playMusic": {
+		"prefix": "Play Music",
+		"body": [
+			"playMusic(music: $0, shuffle: $1, repeat: $2)"
+		],
+		"description": "Start's playing the provided music."
+	},
+	"combineImage": {
+		"prefix": "Combine Image",
+		"body": [
+			"combineImage(images: $0, mode: $1, spacing: $2)"
+		],
+		"description": "Combines an image."
+	},
+	"seek": {
+		"prefix": "Seek Media",
+		"body": [
+			"seek(behavior: $0, time: $1)"
+		],
+		"description": "Seeks in the current media."
+	},
+	"xCallbackURL": {
+		"prefix": "Open X-Callback URL",
+		"body": [
+			"xCallbackURL(url: $0, custom: $1, success: $2, cancel: $3, error: $4, customXSuccess: $5, xSuccess: $6)"
+		],
+		"description": "Run an x-callback URL."
+	},
+	"shortcutDetail": {
+		"prefix": "Get Shortcut Details",
+		"body": [
+			"shortcutDetail(detail: $0, input: $1)"
+		],
+		"description": "Gets a detail about a Shortcut."
+	},
+	"getMatchGroup": {
+		"prefix": "Get Match Group",
+		"body": [
+			"getMatchGroup(type: $0, matches: $1, index: $2)"
+		],
+		"description": "Gets the a certain group in a regex match."
+	},
+	"randomNumber": {
+		"prefix": "Random Number",
+		"body": [
+			"randomNumber(min: $0, max: $1)"
+		],
+		"description": "Get's a random number between the provided max and min."
+	},
+	"openApp": {
+		"prefix": "Open App",
+		"body": [
+			"openApp(id: $0)"
+		],
+		"description": "Opens an app on the device."
+	},
+	"getIP": {
+		"prefix": "Get IP Address",
+		"body": [
+			"getIP(source: $0, type: $1)"
+		],
+		"description": "Gets the devices IP address."
+	},
+	"expandURL": {
+		"prefix": "Expand URL",
+		"body": [
+			"expandURL(url: $0)"
+		],
+		"description": "Expands the given URL."
+	},
+	"selectPhone": {
+		"prefix": "Select Phone Number",
+		"body": [
+			"selectPhone()"
+		],
+		"description": "Allows you to select a phone number."
+	},
+	"getLastImport": {
+		"prefix": "Get Last Photo Import",
+		"body": [
+			"getLastImport()"
+		],
+		"description": "Retrieves the last photo you imported."
+	},
+	"reminderDetail": {
+		"prefix": "Get Reminder Detail",
+		"body": [
+			"reminderDetail(detail: $0, reminder: $1)"
+		],
+		"description": "Gets a detail about the given reminder."
+	},
+	"filterContacts": {
+		"prefix": "Filter Contacts",
+		"body": [
+			"filterContacts(filter: $0)"
+		],
+		"description": "Filters the given contacts. Placing All Contacts in the input will allow you to filter all of your contacts."
+	},
+	"toggleLowPowerMode": {
+		"prefix": "Toggle Low Power Mode",
+		"body": [
+			"toggleLowPowerMode()"
+		],
+		"description": "Toggles low power mode."
+	},
+	"appearanceDetail": {
+		"prefix": "Get Appearance Detail",
+		"body": [
+			"appearanceDetail(detail: $0, appearance: $1)"
+		],
+		"description": "Gets a detail about the given device Appearance."
+	},
+	"wait": {
+		"prefix": "Wait",
+		"body": [
+			"wait(seconds: $0)"
+		],
+		"description": "Waits a specified amount of seconds."
+	},
+	"round": {
+		"prefix": "Round Number",
+		"body": [
+			"round(number: $0, roundTo: $1, mode: $2)"
+		],
+		"description": "Rounds a number depending on the parameters."
+	},
+	"sendMessage": {
+		"prefix": "Send Message",
+		"body": [
+			"sendMessage(message: $0, recipient: $1, show: $2)"
+		],
+		"description": "Sends a message to a recipient."
+	},
+	"setDND": {
+		"prefix": "Set Do Not Disturb",
+		"body": [
+			"setDND(state: $0)"
+		],
+		"description": "Sets the devices Do Not Disturb to the given boolean."
+	},
+	"getCurrentSong": {
+		"prefix": "Get Current Song",
+		"body": [
+			"getCurrentSong()"
+		],
+		"description": "Retreives the current song playing."
+	},
+	"formatNumber": {
+		"prefix": "Format Number",
+		"body": [
+			"formatNumber(number: $0, places: $1)"
+		],
+		"description": "Formats a number to the given decimal places."
+	},
+	"scanQR": {
+		"prefix": "Scan QR Code",
+		"body": [
+			"scanQR()"
+		],
+		"description": "Scans a QR code and returns the output."
+	},
+	"url": {
+		"prefix": "URL",
+		"body": [
+			"url(url: $0)"
+		],
+		"description": "Just a URL."
+	},
+	"artistDetail": {
+		"prefix": "Get iTunes Artist Detail",
+		"body": [
+			"artistDetail(property: $0, note: $1)"
+		],
+		"description": "Gets a detail about the iTunes artist."
+	},
+	"selectedEmail": {
+		"prefix": "Select Email",
+		"body": [
+			"selectedEmail()"
+		],
+		"description": "Allows you to select a contact's email."
+	},
+	"setValue": {
+		"prefix": "Set Dictionary Value",
+		"body": [
+			"setValue(key: $0, value: $1, dictionary: $2)"
+		],
+		"description": "Sets a key's value in a dictionary."
+	},
+	"play": {
+		"prefix": "Play Music",
+		"body": [
+			"play(behavior: $0, source: $1)"
+		],
+		"description": "Plays or pauses the current music."
+	},
+	"removeFromAlbum": {
+		"prefix": "Remove From Album",
+		"body": [
+			"removeFromAlbum(image: $0, album: $1)"
+		],
+		"description": "Removes an image from an album."
+	},
+	"changeCase": {
+		"prefix": "Change Text Case",
+		"body": [
+			"changeCase(text: $0, case: $1)"
+		],
+		"description": "Changes the case of text."
 	},
 	"setMediaDestination": {
 		"prefix": "Set Media Destination",
@@ -1741,5 +1342,404 @@
 			"setMediaDestination(device: $0)"
 		],
 		"description": "Sets the playback destination of the current media."
+	},
+	"getName": {
+		"prefix": "Get Name",
+		"body": [
+			"getName(input: $0)"
+		],
+		"description": "Get's the name of the given input."
+	},
+	"emojiName": {
+		"prefix": "Emoji Name",
+		"body": [
+			"emojiName(input: $0)"
+		],
+		"description": "Retrieves the name of the Emoji."
+	},
+	"richTextFromMarkdown": {
+		"prefix": "Make Rich Text From Markdown",
+		"body": [
+			"richTextFromMarkdown(markdown: $0)"
+		],
+		"description": "Makes rich text from Markdown."
+	},
+	"deletePhotos": {
+		"prefix": "Delete Photos",
+		"body": [
+			"deletePhotos(photos: $0)"
+		],
+		"description": "Deletes the given photos."
+	},
+	"createPlaylist": {
+		"prefix": "Create Playlist",
+		"body": [
+			"createPlaylist(name: $0, music: $1, author: $2, description: $3)"
+		],
+		"description": "Creates a playlist with the given music, name, author and description."
+	},
+	"stockQuote": {
+		"prefix": "Stock Quote",
+		"body": [
+			"stockQuote(symbol: $0)"
+		],
+		"description": "Gets a quote for the provided stock symbol."
+	},
+	"getDictionaryFrom": {
+		"prefix": "Get Dictionary From Input",
+		"body": [
+			"getDictionaryFrom(input: $0)"
+		],
+		"description": "Gets a dictionary from the given input."
+	},
+	"openShortcut": {
+		"prefix": "Open Shortcut",
+		"body": [
+			"openShortcut(name: $0)"
+		],
+		"description": "Opens the shortcut editor to the specified Shortcut."
+	},
+	"showReminderList": {
+		"prefix": "Show Reminders List",
+		"body": [
+			"showReminderList(list: $0)"
+		],
+		"description": "Shows the given reminder list."
+	},
+	"markup": {
+		"prefix": "Markup",
+		"body": [
+			"markup(input: $0)"
+		],
+		"description": "Prepends contents to the file."
+	},
+	"choose": {
+		"prefix": "Choose From List",
+		"body": [
+			"choose(list: $0, prompt: $1, multiple: $2, all: $3)"
+		],
+		"description": "Allows you to choose an item from the given list."
+	},
+	"setBluetooth": {
+		"prefix": "Set Bluetooth",
+		"body": [
+			"setBluetooth(value: $0)"
+		],
+		"description": "Sets the devices bluetooth to the given boolean."
+	},
+	"takeScreenshot": {
+		"prefix": "Take a Screenshot",
+		"body": [
+			"takeScreenshot()"
+		],
+		"description": "Takes a screenshot of the devices current screen."
+	},
+	"cropImage": {
+		"prefix": "Crop Image",
+		"body": [
+			"cropImage(image: $0, position: $1, height: $2, width: $3, x: $4, y: $5)"
+		],
+		"description": "Crops an Image to the specified parameters."
+	},
+	"removeEvents": {
+		"prefix": "Remove Events",
+		"body": [
+			"removeEvents(events: $0, includeFuture: $1)"
+		],
+		"description": "Removes the given events from the calendar."
+	},
+	"podcastDetail": {
+		"prefix": "Get Podcast Show Detail",
+		"body": [
+			"podcastDetail(detail: $0, show: $1)"
+		],
+		"description": "Gets a detail about the given Podcast show. Checkout Launched it's a super good show."
+	},
+	"createPDF": {
+		"prefix": "Create PDF",
+		"body": [
+			"createPDF(input: $0, loop: $1, singlePageNumb: $2, pageStart: $3, pageEnd: $4)"
+		],
+		"description": "Creates a pdf from the provided input."
+	},
+	"filterReminders": {
+		"prefix": "Filter Reminders",
+		"body": [
+			"filterReminders(filter: $0)"
+		],
+		"description": "Filters the given reminders. Placing All Reminders in the input will allow you to filter all of your reminders."
+	},
+	"prependFile": {
+		"prefix": "Prepend File",
+		"body": [
+			"prependFile(input: $0, path: $1, newLine: $2)"
+		],
+		"description": "Prepends contents to the file."
+	},
+	"takeVideo": {
+		"prefix": "Take Video",
+		"body": [
+			"takeVideo(camera: $0, quality: $1, start: $2)"
+		],
+		"description": "Takes a video."
+	},
+	"createNote": {
+		"prefix": "Create Note",
+		"body": [
+			"createNote(text: $0, show: $1)"
+		],
+		"description": "Creates a note with the given input."
+	},
+	"getPodcastEpisodes": {
+		"prefix": "Get Podcast Episodes",
+		"body": [
+			"getPodcastEpisodes(input: $0)"
+		],
+		"description": "Retreives the episodes from a podcast."
+	},
+	"setAirplaneMode": {
+		"prefix": "Set Airplane Mode",
+		"body": [
+			"setAirplaneMode(state: $0)"
+		],
+		"description": "Sets the devices airplane mode."
+	},
+	"batteryLevel": {
+		"prefix": "Battery Level",
+		"body": [
+			"batteryLevel()"
+		],
+		"description": "Retrieves the devices battery level."
+	},
+	"getType": {
+		"prefix": "Get Type",
+		"body": [
+			"getType(input: $0)"
+		],
+		"description": "Get's the type of the given input."
+	},
+	"urlComponent": {
+		"prefix": "Get URL Component",
+		"body": [
+			"urlComponent(url: $0, component: $1)"
+		],
+		"description": "Retrieves component about URL."
+	},
+	"conditionDetail": {
+		"prefix": "Get Condition Details",
+		"body": [
+			"conditionDetail(detail: $0, condition: $1)"
+		],
+		"description": "Gets a detail about the given condition."
+	},
+	"recordAudio": {
+		"prefix": "Record Audio",
+		"body": [
+			"recordAudio(quality: $0, start: $1, end: $2, duration: $3)"
+		],
+		"description": "Records audio with the given parameters."
+	},
+	"uploadPhotos": {
+		"prefix": "Upload Photos To Shared Album",
+		"body": [
+			"uploadPhotos(photos: $0)"
+		],
+		"description": "Uploads the given photos to the shared photos album."
+	},
+	"shazamIt": {
+		"prefix": "Shazam It",
+		"body": [
+			"shazamIt()"
+		],
+		"description": "Starts a Shazam."
+	},
+	"getPodcasts": {
+		"prefix": "Get Podcasts",
+		"body": [
+			"getPodcasts()"
+		],
+		"description": "Retreives all the podcasts in your library."
+	},
+	"filterArticles": {
+		"prefix": "Filter Articles",
+		"body": [
+			"filterArticles(filter: $0)"
+		],
+		"description": "Filters the given articles."
+	},
+	"valueFor": {
+		"prefix": "Get Value For Key",
+		"body": [
+			"valueFor(key: $0, dictionary: $1)"
+		],
+		"description": "Get's the value for a certain key in a dictionary."
+	},
+	"saveToCameraRoll": {
+		"prefix": "Save to Camera Roll",
+		"body": [
+			"saveToCameraRoll(image: $0, album: $1)"
+		],
+		"description": "Saves the given image to the camera roll."
+	},
+	"addUpNext": {
+		"prefix": "Add Music Up Next",
+		"body": [
+			"addUpNext(music: $0, place: $1)"
+		],
+		"description": "Adds the provided music to the up next queue."
+	},
+	"date": {
+		"prefix": "Date",
+		"body": [
+			"date(date: $0)"
+		],
+		"description": "Creates a Date."
+	},
+	"runSSH": {
+		"prefix": "Run Script Over SSH",
+		"body": [
+			"runSSH(host: $0, port: $1, user: $2, auth: $3, password: $4, input: $5, script: $6)"
+		],
+		"description": "Runs the given script over an SSH connection."
+	},
+	"vibrate": {
+		"prefix": "Vibrate Device",
+		"body": [
+			"vibrate()"
+		],
+		"description": "Vibrates the device."
+	},
+	"searchItunes": {
+		"prefix": "Search iTunes",
+		"body": [
+			"searchItunes(query: $0, category: $1, by: $2, results: $3, count: $4)"
+		],
+		"description": "Searches iTunes based of the parameters you provide.."
+	},
+	"correctSpelling": {
+		"prefix": "Correct Spelling",
+		"body": [
+			"correctSpelling(text: $0)"
+		],
+		"description": "Corrects the spelling of a word or sentence. Words can be placed in an array."
+	},
+	"appDetail": {
+		"prefix": "Get App Detail",
+		"body": [
+			"appDetail(detail: $0, app: $1)"
+		],
+		"description": "Gets a detail about the given app."
+	},
+	"filterPhotos": {
+		"prefix": "Filter Photos",
+		"body": [
+			"filterPhotos(filter: $0)"
+		],
+		"description": "Filters the given notes. Placing All Photos in the input will allow you to filter all of your photos."
+	},
+	"shareEXT": {
+		"prefix": "Share With Extensions",
+		"body": [
+			"shareEXT(file: $0)"
+		],
+		"description": "Shares input with extensions."
+	},
+	"getFileOfType": {
+		"prefix": "Get File Of Type",
+		"body": [
+			"getFileOfType(input: $0, type: $1)"
+		],
+		"description": "Retrieves a file of the provided type from the given input.."
+	},
+	"addFrameToGIF": {
+		"prefix": "Add Frame To GIF",
+		"body": [
+			"addFrameToGIF(photo: $0, gif: $1, delay: $2, autoSize: $3, width: $4, height: $5)"
+		],
+		"description": "Adds the given photo to a GIF as a frame."
+	},
+	"skipForward": {
+		"prefix": "Skip Forward",
+		"body": [
+			"skipForward()"
+		],
+		"description": "Skips forward in the current media queue."
+	},
+	"count": {
+		"prefix": "Count",
+		"body": [
+			"count(type: $0, input: $1)"
+		],
+		"description": "Counts different things within the given input."
+	},
+	"setFlashlight": {
+		"prefix": "Set Flashlight",
+		"body": [
+			"setFlashlight(state: $0, level: $1)"
+		],
+		"description": "Sets the flashlight state and brightness."
+	},
+	"getLastBurst": {
+		"prefix": "Get Last Bursts",
+		"body": [
+			"getLastBurst(count: $0)"
+		],
+		"description": "Retrieves the last n bursts you took."
+	},
+	"encode": {
+		"prefix": "Encode Base64",
+		"body": [
+			"encode(input: $0)"
+		],
+		"description": "Encodes the given input into base64 without line breaks."
+	},
+	"markdownFromRich": {
+		"prefix": "Make Markdown From Rich Text",
+		"body": [
+			"markdownFromRich(text: $0)"
+		],
+		"description": "Makes markdown from the given rich text."
+	},
+	"statistic": {
+		"prefix": "Calculate Statistic",
+		"body": [
+			"statistic(input: $0, operation: $1)"
+		],
+		"description": "Calculates a statistic."
+	},
+	"getImagesFrom": {
+		"prefix": "Get Images From Input",
+		"body": [
+			"getImagesFrom(input: $0)"
+		],
+		"description": "Gets Images from the given input."
+	},
+	"toggleAirplaneMode": {
+		"prefix": "Toggle Airplane Mode",
+		"body": [
+			"toggleAirplaneMode()"
+		],
+		"description": "Toggles airplane mode."
+	},
+	"attendeeDetail": {
+		"prefix": "Get Attendee Detail",
+		"body": [
+			"attendeeDetail(detail: $0, attendee: $1)"
+		],
+		"description": "Gets a detail about the given event attendee."
+	},
+	"appendFile": {
+		"prefix": "Append File",
+		"body": [
+			"appendFile(input: $0, path: $1, newLine: $2)"
+		],
+		"description": "Appends contents to the end of a file."
+	},
+	"continueInShortcuts": {
+		"prefix": "Continue In Shortcuts",
+		"body": [
+			"continueInShortcuts()"
+		],
+		"description": "Makes the shortcut continue in the Shortcuts app."
 	},
 }
