@@ -18,6 +18,9 @@ Below are the available commands. To run hit cmd+shift+p (mac) or ctrl+shift+p a
     - Closes all connections to the current Jellycuts Bridge.
 
 # Release Notes
+### 1.2
+Updated to match Jellycuts 1.2
+
 ### 1.0.2
 Files are now updated on file save
 
