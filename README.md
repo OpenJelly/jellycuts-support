@@ -11,7 +11,7 @@ This extension allows you to use the Jelly language and connect directly into th
 - Connect directly to the Jellycuts iOS app.
 - Export Jellycuts to the Shortcuts app.
 ### Commands
-Below are the available commands. To run hit cmd+shift+p (mac) or ctrl+shift+p and type the command you want too perform.
+Below are the available commands. To run hit cmd+shift+p (mac) or ctrl+shift+p and type the command you want to perform.
 1. Open Jellycuts Bridge
     - Opens a Jellycuts Bridge. This is a websocket server running on port 8080 that you can connect to using the Jellycuts App.
 2. Close Jellycuts Bridge

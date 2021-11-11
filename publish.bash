@@ -2,4 +2,4 @@
 
 cd /Users/zacharylineman/GitHub/jellycuts-support/
 vsce package
-vsce publish
+vsce publishnp
