@@ -39,7 +39,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.jelly",
-                "match": "#Color|#Icon|\\b(if|else|menu|var|list|dictionary|repeat|nil|repeatEach|Get|import)\\b"
+                "match": "#Color|#Icon|\\b(if|else|menu|var|list|dictionary|repeat|nil|repeatEach|Get|import|func|macro)\\b"
             }]
         },
         "others": {
@@ -66,7 +66,7 @@
         "constants": {
             "patterns": [{
                 "name": "constant.language.jelly",
-                "match": "\\b(true|false|null)\\b"
+                "match": "\\b(true|false|nil)\\b"
             }]
         },
         "escape": {
