@@ -35,7 +35,11 @@ export function activate(context: vscode.ExtensionContext) {
 					ws.send(docText)
 				}
 			});
-		  });
+
+			ws.on('close', function close() {
+				logInfo("A Connection was closed")
+			  });
+		});
 		  
 		logInfo(`Jellycuts bridge opened on port ${result.local}:${port}`);
 
