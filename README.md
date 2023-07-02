@@ -18,6 +18,9 @@ Below are the available commands. To run hit cmd+shift+p (mac) or ctrl+shift+p a
     - Closes all connections to the current Jellycuts Bridge.
 
 # Release Notes
+### 2.0
+Support for Open Jellycuts. A complete rewrite to the extension allowing for compatability with the brand new client.
+
 ### 1.2
 Updated to match Jellycuts 1.2
 
