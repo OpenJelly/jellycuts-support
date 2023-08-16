@@ -2,7 +2,8 @@
   "name": "jellycuts-support",
   "displayName": "Jellycuts Support",
   "description": "Support for the Jellycuts language and the Jellycuts Bridge",
-  "version": "0.0.1",
+  "version": "2.0.0",
+  "repository": "https://github.com/ActuallyTaylor/Jellycuts-Support",
   "engines": {
     "vscode": "^1.79.0"
   },
